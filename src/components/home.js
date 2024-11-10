@@ -20,10 +20,9 @@ function Home() {
 
     return (
         <>
-            <div
-                className="firsbody"
+            <div className="firsbody" 
                 style={{
-                    backgroundImage: `url("./images/tai.jpeg")`,
+                    backgroundImage: `url("./images/tai.jpeg")`
                 }}
             ></div>
             <div className="hompagebuttons">

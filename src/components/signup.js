@@ -15,7 +15,7 @@ function Signup() {
         >
         </div>
         <div className="card">
-            <h1 className="mx-auto text-primary" >New Account</h1>
+            <h3 className="mx-auto text-primary" >New Account</h3>
             <div className="container">
             <Input p="Email" t="email"   />
             <Input p="Username" t="text"   />
