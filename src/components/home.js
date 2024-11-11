@@ -19,20 +19,18 @@ function Home() {
     }
 
     return (
-        <>
-            <div className="firsbody" 
-                style={{
-                    backgroundImage: `url("./images/tai.jpeg")`
-                }}
-            ></div>
-            <div className="hompagebuttons">
-                <Button onClick={handleSignupClick} className="btn btn-primary" type="button" text={isClicked ? "Loading" : "Signup"} />
-                <Button onClick={handleLoginClick} className="btn btn-light" type="button" text={isClicked ? "Loading" : "Login"} />
-            </div>
-            <div>
-                <Footer />
-            </div>
-        </>
+    <div className="backgroundImg" 
+        style={{
+        backgroundImage: `url("./images/2.jpg")`
+    }}
+>
+        <div className="hompagebuttons">
+            <Button onClick={handleSignupClick} className="btn btn-primary mt-3" type="button" text={isClicked ? "Loading" : "Signup"} />
+            <Button onClick={handleLoginClick} className="btn btn-light mt-3" type="button" text={isClicked ? "Loading" : "Login"} />
+        </div>
+    <Footer /> 
+    </div>
+
     );
 }
 
