@@ -8,14 +8,13 @@ import Input from "./input";
 function Signup() {
     return(<>
         <div
-            className="firsbody"
+            className="backgroundImg"
             style={{
-                backgroundImage: `url("./images/tai.jpeg")`,
+                backgroundImage: `url("./images/2.jpg")`,
             }}
         >
-        </div>
-        <div className="card">
-            <h3 className="mx-auto text-primary" >New Account</h3>
+         <div className="card">
+            <h3 className="text-white" >Weclome New User</h3>
             <div className="container">
             <Input p="Email" t="email"   />
             <Input p="Username" t="text"   />
@@ -24,6 +23,8 @@ function Signup() {
             <Button className="btn btn-primary" text="Signup" />
         </div>
         <Footer />
+        </div>
+       
         </>
     )
 }

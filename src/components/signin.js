@@ -5,25 +5,23 @@ import Input from "./input";
 import Button from "./button";
 
 function Signin() {
-    return(<>
-        <div
-            className="firsbody"
+    return(<div
+            className="backgroundImg"
             style={{
-                backgroundImage: `url("./images/tai.jpeg")`,
+                backgroundImage: `url("./images/2.jpg")`,
             }}
         >
-        </div>
-        <div className="card">
-            <h3 className="mx-auto text-primary" >Weclome Back [user]</h3>
+           <div className="card">
+            <h3 className="text-white" >Weclome Back [user]</h3>
             <div className="container">
             <Input p="Enter Email or Username" t="email"   />
             <Input p="Password" t="password"   />
             <a href="#" className="">Forgot password?</a>
             </div>
-            <Button className="btn btn-primary" text="Signin" />
+            <Button className="btn btn-primary mt-2" text="Signin" />
         </div>
         <Footer />
-        </>
+        </div>
     )
 }
 export default Signin

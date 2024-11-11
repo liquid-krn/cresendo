@@ -29,18 +29,21 @@
         display: flex;
         margin: 10px auto;
         outline: none;
-        background-color: aliceblue;
+        color: white;
+        background-color: transparent;
+        width: 100%;
     }
+    input::placeholder {
+        color: white; /* Replace 'gray' with your preferred color */
+
+    }
+    
     .card{
-        width: 80%;
+        width: 60%;
         margin: 50px auto;
-        background-color: aliceblue;
+        background-color: transparent;
         border: none;
     }
 }
 
-/* @media (min-width: 400px) and (min-height: 854px) {
-    .firsbody {
-        display: none;
-    }
-} */
+
