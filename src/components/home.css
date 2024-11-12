@@ -34,15 +34,17 @@
         width: 100%;
     }
     input::placeholder {
-        color: white; /* Replace 'gray' with your preferred color */
-
+        color: white; 
     }
     
     .card{
-        width: 60%;
+        width: 70%;
+        padding: 20px;
         margin: 50px auto;
-        background-color: transparent;
-        border: none;
+        background-color:#21252e ;
+        border-radius: 20px;
+        /* box-shadow: ; */
+        /* border: none; */
     }
 }
 

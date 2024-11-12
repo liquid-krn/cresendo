@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./home.css";
 import Button from "./button";
 import Footer from "./footer";
+import Navbar from "./phonenavbar";
 import { useNavigate } from "react-router-dom";
 
 function Home() {
@@ -19,6 +20,10 @@ function Home() {
     }
 
     return (
+        <>
+        <div>
+        <Navbar text="Cresendo"/>
+       </div>  
     <div className="backgroundImg" 
         style={{
         backgroundImage: `url("./images/2.jpg")`
@@ -30,7 +35,7 @@ function Home() {
         </div>
     <Footer /> 
     </div>
-
+</>
     );
 }
 
