@@ -1,5 +1,4 @@
-
-@media (max-width: 450px) and (max-height: 940px) {  
+@media (max-width: 450px){  
     a{
         text-decoration: none;
         color: white;
@@ -42,8 +41,6 @@
         margin: 50px auto;
         background-color:#21252e ;
         border-radius: 20px;
-        /* box-shadow: ; */
-        /* border: none; */
     }
 }
 
