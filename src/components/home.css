@@ -1,4 +1,57 @@
-@media (max-width: 450px){  
+@media (max-width: 1380px){  
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    .backgroundImg {
+        height: 100vh;
+        width: 100%;
+        background-size:cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+    }
+    .hompagebuttons{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding-top: 20px; 
+            width: 400px;
+    }
+    .btn{
+        width: 100%;
+        text-align: center;
+    }
+    input{
+        display: flex;
+        margin: 20px auto;
+        outline: none;
+        color: white;
+        background-color: transparent;
+        width: 100%;
+    }
+    input::placeholder {
+        color: white; 
+    }
+    
+    .card {
+        width: 50%;
+        height: 400px;
+        margin: 50px auto;
+        background-color: #21252e;
+        border-radius: 20px;
+        opacity: 0.9; 
+        padding: 20px;
+    }
+    .card h3{
+        margin-top: 80px;
+    }
+}
+
+@media (max-width: 940px){  
     a{
         text-decoration: none;
         color: white;
