@@ -1,47 +1,44 @@
-@media (max-width: 450px){  
-    a{
-        text-decoration: none;
-        color: white;
+@media (max-width: 450px) {
+    a {
+        text-decoration: none !important;
+        color: white !important;
     }
     .backgroundImg {
-        height: 100vh;
-        width: 100%;
-        background-size:cover;
-        background-position: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        height: 100vh !important;
+        width: 100% !important;
+        background-size: cover !important;
+        background-position: center !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
     }
-    .hompagebuttons{
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            padding-top: 20px; 
-            width: 200px;
+    .hompagebuttons {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 10px !important;
+        padding-top: 20px !important;
+        width: 200px !important;
     }
-    .btn{
-        width: 100%;
-        text-align: center;
+    .btn {
+        width: 100% !important;
+        text-align: center !important;
     }
-    input{
-        display: flex;
-        margin: 10px auto;
-        outline: none;
-        color: white;
-        background-color: transparent;
-        width: 100%;
+    input {
+        display: flex !important;
+        margin: 10px auto !important;
+        outline: none !important;
+        color: white !important;
+        background-color: transparent !important;
+        width: 100% !important;
     }
     input::placeholder {
-        color: white; 
+        color: white !important;
     }
-    
-    .card{
-        width: 70%;
-        padding: 20px;
-        margin: 50px auto;
-        background-color:#21252e ;
-        border-radius: 20px;
+    .card {
+        width: 70% !important;
+        padding: 20px !important;
+        margin: 50px auto !important;
+        background-color: #21252e !important;
+        border-radius: 20px !important;
     }
 }
-
-
