@@ -11,6 +11,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        position: relative;
+        z-index: 1;
     }
     .hompagebuttons{
             display: flex;
@@ -35,13 +37,13 @@
         color: white; 
     }
     
-    .card{
+    .card {
         width: 70%;
         padding: 20px;
         margin: 50px auto;
-        background-color:#21252e ;
+        background-color: #21252e;
         border-radius: 20px;
+        opacity: 0.9; 
     }
+    
 }
-
-
