@@ -16,13 +16,18 @@
     }
     .hompagebuttons{
             display: flex;
+            align-items: center;
             flex-direction: column;
             gap: 10px;
             padding-top: 20px; 
             width: 400px;
     }
     .btn{
-        width: 100%;
+        margin: 0px auto;
+        width: 80%;
+        font-size: large;
+        font-weight: 600;
+        height: 3em;
         text-align: center;
     }
     input{
@@ -36,18 +41,18 @@
     input::placeholder {
         color: white; 
     }
-    
     .card {
         width: 50%;
-        height: 400px;
+        height: 300px;
         margin: 50px auto;
         background-color: #21252e;
         border-radius: 20px;
         opacity: 0.9; 
-        padding: 20px;
+        padding: 10px;
     }
     .card h3{
-        margin-top: 80px;
+        margin-top: 30px;
+        margin-right: 17px;
     }
 }
 
@@ -92,7 +97,7 @@
     
     .card {
         width: 70%;
-        padding: 20px;
+        padding: 10px;
         margin: 50px auto;
         background-color: #21252e;
         border-radius: 20px;

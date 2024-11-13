@@ -18,7 +18,7 @@ function Signin() {
             <Input p="Password" t="password"   />
             <a href="#" className="">Forgot password?</a>
             </div>
-            <Button className="btn btn-primary mt-2" text="Signin" />
+            <Button className="btn btn-primary mt-3" text="Signin" />
         </div>
         <Footer />
         </div>
