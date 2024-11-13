@@ -3,10 +3,18 @@ import "./home.css";
 import Button from "./button";
 import Footer from "./footer";
 import Input from "./input";
-
+import Navbar from "./phonenavbar";
+import { useNavigate } from "react-router-dom";
 
 function Signup() {
+    const navigate = useNavigate();
+    function handleClick() {
+        navigate('/')
+    }
     return(<>
+        <div onClick={handleClick}>
+        <Navbar text="Cresendo"/>
+       </div>
         <div
             className="backgroundImg"
             style={{

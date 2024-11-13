@@ -3,9 +3,19 @@ import "./home.css";
 import Footer from "./footer";
 import Input from "./input";
 import Button from "./button";
+import Navbar from "./phonenavbar";
+import { useNavigate } from "react-router-dom";
 
 function Signin() {
-    return(<div
+    const navigate = useNavigate();
+    function handleClick() {
+        navigate('/')
+    }
+    return(<>
+        <div onClick={handleClick}>
+            <Navbar text="Cresendo"/>
+        </div>
+        <div
             className="backgroundImg"
             style={{
                 backgroundImage: `url("./images/2.jpg")`,
@@ -22,6 +32,7 @@ function Signin() {
         </div>
         <Footer />
         </div>
+     </>   
     )
 }
 export default Signin
