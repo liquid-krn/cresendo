@@ -1,3 +1,72 @@
+@media (max-width: 2140px){  
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      
+      .text {
+        animation: fadeIn 3s ease-in-out;
+      }
+      
+    .homepage >div > h1{
+        font-size: 70px;
+        font-weight: bold;
+        color: aliceblue;
+    }
+    .backgroundImg {
+        height: 100vh;
+        width: 100%;
+        background-size:cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+    }
+    .hompagebuttons{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        gap: 10px;
+        padding-top: 20px; 
+        width: 400px;
+        margin: 0 auto;
+}
+.btn{
+    margin: 0px auto;
+    width: 80%;
+    font-size: large;
+    font-weight: 600;
+    height: 3em;
+    text-align: center;
+}
+input{
+    display: flex;
+    margin: 20px auto;
+    outline: none;
+    color: white;
+    background-color: transparent;
+    width: 100%;
+}
+input::placeholder {
+    color: white; 
+}
+.card {
+    width: 24%;
+    height: 350px;
+    margin: 50px auto;
+    background-color: #21252e;
+    border-radius: 20px;
+    opacity: 0.9; 
+    padding: 10px;
+}
+.card > h3{
+    margin-top: 30px;
+    width: 80%;
+    margin-left: 13px;
+}
+}
 @media (max-width: 1380px){  
     a{
         text-decoration: none;
