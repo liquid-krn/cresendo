@@ -30,12 +30,12 @@ function Home() {
     }}
 >
 <div className="homepage">
-        <div className="text" style={{backgroundColor:"#21252e", padding:"10px", borderRadius:"15px"}}>
+        <div className="text" style={{backgroundColor:"#21252e", padding:"10px", borderRadius:"15px", opacity: "0.9" }}>
             <h1>Welcome to cresendo</h1>
         </div>
         <div className="hompagebuttons">
-            <Button onClick={handleSignupClick} className="btn btn-primary mt-3" type="button" text={isClicked ? "Loading" : "Signup"} />
-            <Button onClick={handleLoginClick} className="btn btn-light mt-3" type="button" text={isClicked ? "Loading" : "Login"} />
+            <Button onClick={handleSignupClick} className="btn btn-primary mt-3 b1" type="button" text={isClicked ? "Loading" : "Signup"} />
+            <Button onClick={handleLoginClick} className="btn btn-light mt-3 b2" type="button" text={isClicked ? "Loading" : "Login"} />
         </div>
 </div>        
     <Footer /> 

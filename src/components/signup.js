@@ -11,6 +11,9 @@ function Signup() {
     function handleClick() {
         navigate('/')
     }
+    function buttonclick(){
+        navigate('/purchase')
+    }
     return(<>
         <div onClick={handleClick}>
         <Navbar text="Cresendo"/>
@@ -28,7 +31,7 @@ function Signup() {
             <Input p="Username" t="text"   />
             <Input p="Password" t="password"   />
             </div>
-            <Button className="btn btn-primary" text="Signup" />
+            <Button className="btn btn-primary" text="Signup" onClick={buttonclick} />
         </div>
         <Footer />
         </div>

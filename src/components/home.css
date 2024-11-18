@@ -7,12 +7,21 @@
       .text {
         animation: fadeIn 3s ease-in-out;
       }
+      .b1 {
+        animation: fadeIn 4s ease-in-out;
+      }
+      .b2 {
+        animation: fadeIn 5s ease-in-out;
+      }
       
     .homepage >div > h1{
         font-size: 70px;
         font-weight: bold;
         color: aliceblue;
     }
+    .dropdown{
+        width: 100%;
+       }
     .backgroundImg {
         height: 100vh;
         width: 100%;
@@ -72,6 +81,12 @@ input::placeholder {
         text-decoration: none;
         color: white;
     }
+    .dropdown{
+        width: 100%;
+       }
+    .payment-card{
+        width: 79%;
+       }
     .backgroundImg {
         height: 100vh;
         width: 100%;
@@ -94,7 +109,7 @@ input::placeholder {
     .btn{
         margin: 0px auto;
         width: 80%;
-        font-size: large;
+        font-size: medium;
         font-weight: 600;
         height: 3em;
         text-align: center;
@@ -127,6 +142,17 @@ input::placeholder {
 }
 
 @media (max-width: 940px){  
+    .homepage >div > h1{
+        font-size: 39px;
+        font-weight: bold;
+        color: aliceblue;
+    }
+   .dropdown{
+    width: 50%;
+   }
+   .payment-card{
+    width: 100%;
+   }
     a{
         text-decoration: none;
         color: white;
