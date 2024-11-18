@@ -208,8 +208,16 @@ input::placeholder {
         margin-left: 15px;
     }    
 }
-@media (max-width: 940px){  
-    .payment-card{
-        width: 100%;
+@media (max-width: 670px){  
+    .homepage >div > h1{
+        font-size: 34px;
+        font-weight: bold;
+        color: aliceblue;
+        display: flex;
+        text-align: center;
     }
+    .text {
+        width: 80%;
+        margin: 0 auto;
+      }
 }
