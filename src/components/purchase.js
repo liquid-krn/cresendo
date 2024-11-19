@@ -3,25 +3,23 @@ import Input from "./input";
 import Button from "./button";
 import { useNavigate } from "react-router-dom";
 
-
 function Purchase() {
     const [rate, setRate] = useState(0); 
     const [entry, setEntry] = useState(0); 
-    const [currency, setCurrency] = useState("");
+    const [currency, setCurrency] = useState("Coin"); // Displayed name of the coin
     const [error, setError] = useState("");
 
     const fetchRate = async (selectedCurrency) => {
         const API_KEY = process.env.REACT_APP_KEY; 
         const API_URL = `https://api.coinlayer.com/live?access_key=${API_KEY}&symbols=${selectedCurrency}&target=NGN`;
-    
+
         try {
             const response = await fetch(API_URL);
             const data = await response.json();
-    
+
             if (data.success) {
                 const adjustedRate = Math.max(0, data.rates[selectedCurrency.toUpperCase()] - 100);
-                setRate(adjustedRate);
-                setCurrency(selectedCurrency.toUpperCase());
+                setRate(adjustedRate); // Set the rate for USDT or ETH
             } else {
                 setError("Failed to fetch live rates.");
             }
@@ -31,11 +29,11 @@ function Purchase() {
     };
 
     const navigate = useNavigate();
- 
-    function accept() {
-        navigate('/barcode')
-    }
-    
+
+    const accept = () => {
+        navigate('/barcode');
+    };
+
     const handleAmountChange = (e) => {
         const inputValue = Number(e.target.value); 
         if (inputValue <= 49) {
@@ -46,10 +44,10 @@ function Purchase() {
             setEntry(inputValue);
         }
     };
-    
 
-    const handleCurrencySelection = (selectedCurrency) => {
-        fetchRate(selectedCurrency);
+    const handleCurrencySelection = (selectedLabel, fetchSymbol) => {
+        setCurrency(selectedLabel); // Update button label to the selected display name
+        fetchRate(fetchSymbol); // Fetch the rate using the fetchSymbol (e.g., "USDT")
     };
 
     return (
@@ -71,13 +69,13 @@ function Purchase() {
                                 data-bs-toggle="dropdown"
                                 aria-expanded="false"
                             >
-                                Coin Select
+                                {currency} {/* Display selected label */}
                             </button>
                             <ul className="dropdown-menu" aria-labelledby="currencyDropdown">
                                 <li>
                                     <button
                                         className="dropdown-item"
-                                        onClick={() => handleCurrencySelection("USDT")}
+                                        onClick={() => handleCurrencySelection("BTC", "USDT")}
                                     >
                                         <i className="fa-brands fa-btc me-2"></i> Bitcoin
                                     </button>
@@ -85,7 +83,7 @@ function Purchase() {
                                 <li>
                                     <button
                                         className="dropdown-item"
-                                        onClick={() => handleCurrencySelection("ETH")}
+                                        onClick={() => handleCurrencySelection("ETH", "ETH")}
                                     >
                                         <i className="fa-brands fa-ethereum me-2"></i> Ethereum
                                     </button>
@@ -94,14 +92,14 @@ function Purchase() {
                         </div>
                         <Input
                             t="number"
-                            className = "priceinput"
-                            p="Enter $ value"
+                            className="priceinput"
+                            p="Enter $ amount"
                             n="amount"
                             oC={handleAmountChange}
                             value={entry}
                         />
                     </div>
-                    <Button text="Accept" className="btn btn-primary mt-2"  onClick={accept}/>
+                    <Button text="Accept" className="btn btn-primary mt-2" onClick={accept} />
                     <Button text="Back" className="btn btn-primary mt-2" />
                     {error && (
                         <p className="text-danger mt-3 mx-auto">
