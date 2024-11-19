@@ -182,7 +182,7 @@ input::placeholder {
         width: 100%;
         text-align: center;
     }
-    input{
+    .priceinput{
         display: flex;
         margin: 20px 0  0 10px;
         outline: none;
@@ -220,7 +220,7 @@ input::placeholder {
         width: 80%;
         margin: 0 auto;
       }
-      input{
+      .priceinput{
         display: flex;
         color: white;
         background-color: transparent;

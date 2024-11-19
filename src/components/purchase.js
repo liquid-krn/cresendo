@@ -94,7 +94,8 @@ function Purchase() {
                         </div>
                         <Input
                             t="number"
-                            p="Enter Purchase amount"
+                            className = "priceinput"
+                            p="Enter $ value"
                             n="amount"
                             oC={handleAmountChange}
                             value={entry}
