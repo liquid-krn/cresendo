@@ -184,7 +184,7 @@ input::placeholder {
     }
     input{
         display: flex;
-        margin: 10px auto;
+        margin: 20px 0  0 10px;
         outline: none;
         color: white;
         background-color: transparent;
@@ -219,5 +219,13 @@ input::placeholder {
     .text {
         width: 80%;
         margin: 0 auto;
+      }
+      input{
+        display: flex;
+        color: white;
+        background-color: transparent;
+        width: 100%;
+        margin-top: 20px;
+        margin-left: 20px;
       }
 }
