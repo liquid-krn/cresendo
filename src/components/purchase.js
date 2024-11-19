@@ -1,24 +1,26 @@
 import React, { useState } from "react";
 import Input from "./input";
 import Button from "./button";
+import { useNavigate } from "react-router-dom";
+
 
 function Purchase() {
-    const [rate, setRate] = useState(0); // Current rate for BTC/ETH
-    const [entry, setEntry] = useState(0); // Purchase amount
-    const [currency, setCurrency] = useState(""); // Selected currency
-    const [error, setError] = useState(""); // For error handling
+    const [rate, setRate] = useState(0); 
+    const [entry, setEntry] = useState(0); 
+    const [currency, setCurrency] = useState("");
+    const [error, setError] = useState("");
 
-    // Function to fetch live rates from Coinlayer
     const fetchRate = async (selectedCurrency) => {
-        const API_KEY = "9a16755ab2f03e2efe72ae9dff856364"; // Replace with your actual API key
+        const API_KEY = process.env.REACT_APP_KEY; 
         const API_URL = `https://api.coinlayer.com/live?access_key=${API_KEY}&symbols=${selectedCurrency}&target=NGN`;
-
+    
         try {
             const response = await fetch(API_URL);
             const data = await response.json();
-
+    
             if (data.success) {
-                setRate(data.rates[selectedCurrency.toUpperCase()]);
+                const adjustedRate = Math.max(0, data.rates[selectedCurrency.toUpperCase()] - 100);
+                setRate(adjustedRate);
                 setCurrency(selectedCurrency.toUpperCase());
             } else {
                 setError("Failed to fetch live rates.");
@@ -28,9 +30,23 @@ function Purchase() {
         }
     };
 
+    const navigate = useNavigate();
+ 
+    function accept() {
+        navigate('/barcode')
+    }
+    
     const handleAmountChange = (e) => {
-        setEntry(e.target.value);
+        const inputValue = Number(e.target.value); 
+        if (inputValue <= 49) {
+            setError("Entry must be $50 or more");
+            setEntry(0);
+        } else {
+            setError("");
+            setEntry(inputValue);
+        }
     };
+    
 
     const handleCurrencySelection = (selectedCurrency) => {
         fetchRate(selectedCurrency);
@@ -44,7 +60,7 @@ function Purchase() {
             >
                 <div className="card">
                     <h1 className="d-flex mx-auto mt-2" style={{ color: "white" }}>
-                        $/{rate.toLocaleString()} | Total: ₦{(rate * entry).toLocaleString()}
+                        $/{rate.toLocaleString()} | ₦{(rate * entry).toLocaleString()}
                     </h1>
                     <div className="d-flex mx-auto mt-5 payment-card">
                         <div className="dropdown">
@@ -84,10 +100,10 @@ function Purchase() {
                             value={entry}
                         />
                     </div>
-                    <Button text="Accept" className="btn btn-primary mt-2" />
+                    <Button text="Accept" className="btn btn-primary mt-2"  onClick={accept}/>
                     <Button text="Back" className="btn btn-primary mt-2" />
                     {error && (
-                        <p className="text-danger mt-3">
+                        <p className="text-danger mt-3 mx-auto">
                             {error}
                         </p>
                     )}
