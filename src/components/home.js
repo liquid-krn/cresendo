@@ -26,7 +26,7 @@ function Home() {
   return (
     <div className="backgroundImg"
     style={{
-      backgroundImage: `url("./images/2.jpg")`,
+      backgroundImage: `url("/images/2.jpg")`,
     }}>
       <header className="absolute inset-x-0 top-0 z-50">
         <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8 bg-gray-800">
@@ -36,7 +36,7 @@ function Home() {
               <img
               style={{width:"50px",height:"50px"}}
                 alt=""
-                src="./images/icon.jpg"
+                src="/images/icon.jpg"
                 className="h-8 w-auto"
               />
               <h1 className='mt-3 ms-2 navbrandtext'><span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 to-pink-400">Cresendo</span></h1>
@@ -73,7 +73,7 @@ function Home() {
                 <span className="sr-only">Cresendo</span>
                 <img
                   alt=""
-                  src="./images/icon.jpg"
+                  src="/images/icon.jpg"
                   className="h-8 w-auto"
                 />
               </a>

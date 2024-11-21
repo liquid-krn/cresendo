@@ -38,7 +38,7 @@ function Signup() {
               <img
               style={{width:"50px",height:"50px"}}
                 alt=""
-                src="./images/icon.jpg"
+                src="/images/icon.jpg"
                 className="h-8 w-auto"
               />
               <h1 className='mt-3 ms-2 navbrandtext'><span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 to-pink-400">Cresendo</span></h1>
@@ -75,7 +75,7 @@ function Signup() {
                 <span className="sr-only">Cresendo</span>
                 <img
                   alt=""
-                  src="./images/icon.jpg"
+                  src="/images/icon.jpg"
                   className="h-8 w-auto"
                 />
               </a>
@@ -119,7 +119,7 @@ function Signup() {
         <div
             className="backgroundImg"
             style={{
-                backgroundImage: `url("./images/2.jpg")`,
+                backgroundImage: `url("/images/2.jpg")`,
             }}
         >
          <div className="card">
