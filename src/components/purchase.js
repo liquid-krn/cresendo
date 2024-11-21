@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Input from "./input";
 import Button from "./button";
+import Footer from "./footer";
 import { useNavigate } from "react-router-dom";
 
 function Purchase() {
@@ -107,6 +108,7 @@ function Purchase() {
                         </p>
                     )}
                 </div>
+                <Footer />
             </div>
         </div>
     );

@@ -3,10 +3,44 @@
         from { opacity: 0; }
         to { opacity: 1; }
       }
-      
+      .welcome{
+        background-color: #21252e;
+        border-radius: 20px;
+        opacity: 0.9; 
+        padding: 20px;
+        }
+        nav>div>a{
+          display: flex;
+            position: relative;
+            float: left;
+        } 
+      .alice-blue{
+        color: aliceblue;
+      }
+      img{
+        border-radius: 10px;
+      }
+      .welcome h1, .welcome p{
+        color: aliceblue;
+      }
+      .navbrand{
+        position: relative;
+        float: left;
+      }
+      .navbrandtext{
+        font-weight: bold;
+      }
       .text {
+        width: 50%;
+        margin: 0 auto;
+        text-align: center;
         animation: fadeIn 3s ease-in-out;
       }
+      .homepage >div > h3{
+        font-size: 25px;
+        font-weight: bold;
+        color: aliceblue;
+    }
       .b1 {
         animation: fadeIn 4s ease-in-out;
       }
@@ -15,7 +49,7 @@
       }
       
     .homepage >div > h1{
-        font-size: 70px;
+        font-size: 45px;
         font-weight: bold;
         color: aliceblue;
     }
@@ -72,6 +106,12 @@ input::placeholder {
     border-radius: 20px;
     opacity: 0.9; 
     padding: 10px;
+}
+.card h1{
+    color: aliceblue;
+    margin: 5px auto 3px;
+    font-weight: bolder;
+    font-size: 30px;
 }
 .card > h3{
     margin-top: 30px;
@@ -229,3 +269,6 @@ input::placeholder {
         margin-left: 20px;
       }
 }
+
+
+
