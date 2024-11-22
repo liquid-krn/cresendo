@@ -1,10 +1,8 @@
-import React from "react";
-import { useState } from 'react'
+import React, {useState} from "react";
 import "./home.css";
 import Footer from "./footer";
 import Input from "./input";
 import Button from "./button";
-import Navbar from "./phonenavbar";
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { useNavigate } from "react-router-dom";
@@ -125,11 +123,11 @@ function Signin() {
            <h1>SIGN-IN</h1>
             <h3 className="text-white" >Weclome Back [user]</h3>
             <div className="container">
-            <Input p="Enter Email or Username" t="email"   />
-            <Input p="Password" t="password"   />
-            <a href="#" className="">Forgot password?</a>
+            <Input p="Enter Email or Username" t="email" className="mt-4 border-0 border-bottom border-primary-subtle" />
+            <Input p="Password" t="password" className="mt-4 border-0 border-bottom border-primary-subtle" />
+            <a href="#" className="mt-6 text-white">Forgot password?</a>
             </div>
-            <Button onClick={Login} className="btn btn-primary mt-3" text="Signin" />
+            <Button onClick={Login} className="btn btn-primary mt-2" text="Signin" />
         </div>
         <Footer />
         </div>

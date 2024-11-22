@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React,{ useState } from 'react'
 import Footer from "./footer"
 import Button from './button';
 import { useNavigate } from "react-router-dom";
@@ -26,7 +26,7 @@ function Home() {
   return (
     <div className="backgroundImg"
     style={{
-      backgroundImage: `url("/images/2.jpg")`,
+      backgroundImage: `url("/images/2.jpg")`
     }}>
       <header className="absolute inset-x-0 top-0 z-50">
         <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8 bg-gray-800">

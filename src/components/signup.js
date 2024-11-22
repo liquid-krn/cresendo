@@ -124,13 +124,13 @@ function Signup() {
         >
          <div className="card">
          <h1>SIGN-UP</h1>
-            <h3 className="text-white" >Weclome New User</h3>
+            <h3 className="text-white" >Weclome New [User]</h3>
             <div className="container">
-            <Input p="Email" t="email"   />
-            <Input p="Username" t="text"   />
-            <Input p="Password" t="password"   />
+            <Input p="Email" t="email"  className="mt-4 border-0 border-bottom border-primary-subtle" />
+            <Input p="Username" t="text"  className="mt-4 border-0 border-bottom border-primary-subtle" />
+            <Input p="Password" t="password" className="mt-4 border-0 border-bottom border-primary-subtle"  />
             </div>
-            <Button className="btn btn-primary" text="Signup" onClick={buttonclick} />
+            <Button className="btn btn-primary mt-6" text="Signup" onClick={buttonclick} />
         </div>
         <Footer />
         </div>

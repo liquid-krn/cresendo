@@ -117,6 +117,7 @@ input::placeholder {
     margin-top: 30px;
     width: 80%;
     margin-left: 13px;
+    font-weight: bold;
 }
 }
 @media (max-width: 1380px){  
