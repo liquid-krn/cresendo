@@ -20,9 +20,15 @@ function Purchase() {
     const [entry, setEntry] = useState(0); 
     const [currency, setCurrency] = useState("Coin"); // Displayed name of the coin
     const [error, setError] = useState("");
-    function Signup() {
-        navigate('/signup')
-    }
+
+    const navigate = useNavigate();
+
+    const accept = () => {
+        navigate('/barcode');
+    };
+    function handleClick() {
+      navigate('/')
+  }
 
     const fetchRate = async (selectedCurrency) => {
         const API_KEY = process.env.REACT_APP_KEY; 
@@ -43,11 +49,7 @@ function Purchase() {
         }
     };
 
-    const navigate = useNavigate();
-
-    const accept = () => {
-        navigate('/barcode');
-    };
+    
 
     const handleAmountChange = (e) => {
         const inputValue = Number(e.target.value); 
@@ -70,7 +72,7 @@ function Purchase() {
         <header className="absolute inset-x-0 top-0 z-50">
         <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8 bg-gray-800">
           <div className="flex lg:flex-1">
-            <a href="#" className="-m-1.5 p-1.5">
+            <a href="#" className="-m-1.5 p-1.5" onClick={handleClick}>
               <span className="sr-only">Cresendo</span>
               <img
               style={{width:"50px",height:"50px"}}
@@ -103,8 +105,8 @@ function Purchase() {
         <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
           <div className="fixed inset-0 z-50" />
           <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-            <div className="flex items-center justify-between">
-              <a href="#" className="-m-1.5 p-1.5">
+            <div className="flex items-center justify-between" >
+              <a href="#" className="-m-1.5 p-1.5" onClick={handleClick}>
                 <span className="sr-only">Cresendo</span>
                 <img
                   alt=""
@@ -134,15 +136,7 @@ function Purchase() {
                     </a>
                   ))}
                 </div>
-                <div className="py-6">
-                  <a
-                    onClick={Signup}
-                    href="#"
-                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                  >
-                    Sign-Up
-                  </a>
-                </div>
+  
               </div>
             </div>
           </DialogPanel>
@@ -150,7 +144,7 @@ function Purchase() {
       </header><header className="absolute inset-x-0 top-0 z-50">
         <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8 bg-gray-800">
           <div className="flex lg:flex-1">
-            <a href="#" className="-m-1.5 p-1.5">
+            <a href="#" className="-m-1.5 p-1.5" onClick={handleClick}>
               <span className="sr-only">Cresendo</span>
               <img
               style={{width:"50px",height:"50px"}}
@@ -213,15 +207,6 @@ function Purchase() {
                       {item.name}
                     </a>
                   ))}
-                </div>
-                <div className="py-6">
-                  <a
-                    onClick={Signup}
-                    href="#"
-                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                  >
-                    Sign-Up
-                  </a>
                 </div>
               </div>
             </div>
