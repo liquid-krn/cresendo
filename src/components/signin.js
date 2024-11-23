@@ -145,12 +145,12 @@ function Signin() {
             <Input
               p="Enter Email or Username"
               t="email"
-              className="mt-4 border-0 border-b border-primary-subtle"
+              className="mt-4 border-0 border-bottom border-primary-subtle"
             />
             <Input
               p="Password"
               t="password"
-              className="mt-4 border-0 border-b border-primary-subtle"
+              className="mt-4 border-0 border-bottom border-primary-subtle"
             />
             <a href="#" className="mt-6 text-white">
               Forgot password?

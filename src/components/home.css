@@ -22,6 +22,7 @@
       }
       .welcome h1, .welcome p{
         color: aliceblue;
+        font-family:sans-serif ;
       }
       .navbrand{
         position: relative;
@@ -112,12 +113,14 @@ input::placeholder {
     margin: 5px auto 3px;
     font-weight: bolder;
     font-size: 30px;
+    font-family: sans-serif;
 }
 .card > h3{
     margin-top: 30px;
     width: 80%;
     margin-left: 13px;
     font-weight: bold;
+    font-family: sans-serif;
 }
 }
 @media (max-width: 1380px){  
