@@ -137,7 +137,7 @@ function Signup() {
       </header>
 
       {/* Main Content */}
-      <div className="relative flex items-center justify-center min-h-screen">
+      <div className="animate__animated animate__fadeIn relative flex items-center justify-center min-h-screen">
         <div className="card bg-gray-800 bg-opacity-90 p-6 rounded-lg shadow-lg">
           <h1 className="text-3xl font-bold text-white">SIGN-UP</h1>
           <h3 className="text-white mt-2">Welcome [user]</h3>
