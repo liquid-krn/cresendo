@@ -75,7 +75,7 @@ function Signin() {
             <a
               onClick={Signup}
               href="#"
-              className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500"
+              className="transition delay-150 duration-300 ease-in-out transform hover:scale-105 rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500"
             >
               Sign-up
             </a>
@@ -141,7 +141,7 @@ function Signin() {
         <div className="card bg-gray-800 bg-opacity-90 p-6 rounded-lg shadow-lg">
           <h1 className="text-3xl font-bold text-white">SIGN-IN</h1>
           <h3 className="text-white mt-2">Welcome Back [user]</h3>
-          <div className="container mt-4">
+          <div className="container mt-2">
             <Input
               p="Enter Email or Username"
               t="email"
@@ -158,7 +158,7 @@ function Signin() {
           </div>
           <Button
             onClick={Login}
-            className="btn btn-primary mt-4"
+            className="transition delay-150 duration-300 ease-in-out transform hover:scale-105 btn btn-primary mt-3"
             text="Signin"
           />
         </div>

@@ -18,7 +18,7 @@ function Purchase() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
     const [rate, setRate] = useState(0); 
     const [entry, setEntry] = useState(0); 
-    const [currency, setCurrency] = useState("Coin"); // Displayed name of the coin
+    const [currency, setCurrency] = useState("Coin");
     const [error, setError] = useState("");
 
     const navigate = useNavigate();
@@ -40,7 +40,7 @@ function Purchase() {
 
             if (data.success) {
                 const adjustedRate = Math.max(0, data.rates[selectedCurrency.toUpperCase()] - 100);
-                setRate(adjustedRate); // Set the rate for USDT or ETH
+                setRate(adjustedRate);
             } else {
                 setError("Failed to fetch live rates.");
             }
@@ -56,15 +56,16 @@ function Purchase() {
         if (inputValue <= 49) {
             setError("Entry must be $50 or more");
             setEntry(0);
-        } else {
-            setError("");
-            setEntry(inputValue);
         }
+        else{
+          setError("");
+          setEntry(inputValue);
+      }        
     };
 
     const handleCurrencySelection = (selectedLabel, fetchSymbol) => {
-        setCurrency(selectedLabel); // Update button label to the selected display name
-        fetchRate(fetchSymbol); // Fetch the rate using the fetchSymbol (e.g., "USDT")
+        setCurrency(selectedLabel); 
+        fetchRate(fetchSymbol); 
     };
 
     return (

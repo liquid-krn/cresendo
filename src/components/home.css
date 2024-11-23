@@ -5,9 +5,14 @@
       }
       .welcome{
         background-color: #21252e;
-        border-radius: 20px;
+        border-radius: 90px;
         opacity: 0.9; 
         padding: 20px;
+        }
+        .welcomepagebutton{
+            width: 70%;
+            margin: auto;
+            margin-top: 15px;
         }
         nav>div>a{
           display: flex;
@@ -30,6 +35,8 @@
       }
       .navbrandtext{
         font-weight: bold;
+        font-size: large;
+        font-family: sans-serif;
       }
       .text {
         width: 50%;
@@ -272,6 +279,13 @@ input::placeholder {
         margin-top: 20px;
         margin-left: 20px;
       }
+    .welcome{
+        border-radius: 40px;
+    }
+    .navbrandtext{
+        font-family: sans-serif;
+        font-size: larger;
+    }
 }
 
 

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Footer from './footer';
+import Button from './button';
 import { useNavigate } from 'react-router-dom';
 import { Dialog, DialogPanel } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
@@ -65,7 +66,7 @@ function Home() {
             ))}
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-             <a onClick={Login} href="#" className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+             <a onClick={Login} href="#" className="transition delay-150 duration-300 ease-in-out transform hover:scale-105 rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
                 Login
               </a>
           </div>
@@ -119,7 +120,7 @@ function Home() {
         </Dialog>
       </header>
       {/* Main Content */}
-      <div className="relative isolate px-6 pt-24 lg:px-8">
+      <div className="animate__animated animate__fadeIn relative isolate px-6 pt-24 lg:px-8">
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
           <div className="text-center welcome shadow-2xl">
             <h1 className="text-balance text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">
@@ -140,19 +141,11 @@ function Home() {
               trades. Join us today to experience seamless cryptocurrency
               transactions!!
             </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
-              <button
-                onClick={handleClick}
-                className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-              >
-                Register
-              </button>
-              <button
-                onClick={Login}
-                className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-              >
-                Login
-              </button>
+            <div className="mt-10 d-flex items-center justify-center gap-x-6 welcomepagebutton" >
+            {/* <Button onClick={handleClick} className="transition delay-150 duration-300 ease-in-out btn btn-primary" text="Register" /> */}
+            
+            <Button onClick={handleClick} className="transition delay-150 duration-300 ease-in-out transform hover:scale-105 btn btn-primary" text="Register" />
+            <Button onClick={handleClick} className="transition delay-150 duration-300 ease-in-out transform hover:scale-105 btn btn-primary" text="Login" />
             </div>
           </div>
         </div>

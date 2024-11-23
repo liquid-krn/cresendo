@@ -75,7 +75,7 @@ function Signup() {
             <a
               onClick={Signup}
               href="#"
-              className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500"
+              className="transition delay-150 duration-300 ease-in-out transform hover:scale-105 rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500"
             >
               Login
             </a>
@@ -161,8 +161,8 @@ function Signup() {
           </div>
           <Button
             onClick={Login}
-            className="btn btn-primary mt-4"
-            text="Signin"
+            className="transition delay-150 duration-300 ease-in-out transform hover:scale-105 btn btn-primary mt-2"
+            text="Signup"
           />
         </div>
       </div>
