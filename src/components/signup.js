@@ -154,7 +154,7 @@ function Signup() {
             />
              <Input
               p="Password"
-              t="Username"
+              t="password"
               className="mt-4 border-0 border-bottom border-primary-subtle"
             />
        
