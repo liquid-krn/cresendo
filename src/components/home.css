@@ -19,15 +19,11 @@
             position: relative;
             float: left;
         } 
-      .alice-blue{
-        color: aliceblue;
-      }
       img{
         border-radius: 10px;
       }
       .welcome h1, .welcome p{
         color: aliceblue;
-        font-family:sans-serif ;
       }
       .navbrand{
         position: relative;
@@ -103,9 +99,6 @@ input{
     background-color: transparent;
     width: 100%;
 }
-input::placeholder {
-    color: white; 
-}
 .card {
     width: 24%;
     height: 393x;
@@ -178,9 +171,6 @@ input::placeholder {
         background-color: transparent;
         width: 100%;
     }
-    input::placeholder {
-        color: aliceblue; 
-    }
     .card {
         width: 50%;
         height: 325px;
@@ -243,10 +233,6 @@ input::placeholder {
         background-color: transparent;
         width: 100%;
     }
-    input::placeholder {
-        color: aliceblue; 
-    }
-    
     .card {
         width: 80%;
         padding: 10px;

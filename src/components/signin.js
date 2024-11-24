@@ -54,7 +54,7 @@ function Signin() {
                 className="h-8 w-auto"
               />
               <h1 className="mt-3 ms-2 navbrandtext">
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 to-pink-400">
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-purple-200">
                   Cresendo
                 </span>
               </h1>
@@ -139,8 +139,8 @@ function Signin() {
       {/* Main Content */}
       <div className="animate__animated animate__fadeIn relative flex items-center justify-center min-h-screen">
         <div className="card bg-gray-800 bg-opacity-90 p-6 rounded-lg shadow-lg">
-          <h1 className="text-3xl font-bold text-white">SIGN-IN</h1>
-          <h3 className="text-white mt-2">Welcome Back [user]</h3>
+          <h1 className="font-sans text-3xl font-bold text-white text-center">SIGN-IN</h1>
+          <h3 className="font-serif text-white mt-2">Welcome Back [user]</h3>
           <div className="container mt-2">
             <Input
               p="Enter Email or Username"
@@ -152,7 +152,7 @@ function Signin() {
               t="password"
               className="placeholder:italic placeholder:text-slate-400 mt-4 border-0 border-bottom border-primary-subtle"
             />
-            <a href="#" className="mt-6 text-white">
+            <a href="#" className="font-sans mt-6 text-white">
               Forgot password?
             </a>
           </div>

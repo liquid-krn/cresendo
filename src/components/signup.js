@@ -54,7 +54,7 @@ function Signup() {
                 className="h-8 w-auto"
               />
               <h1 className="mt-3 ms-2 navbrandtext">
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 to-pink-400">
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-purple-200">
                   Cresendo
                 </span>
               </h1>
@@ -139,8 +139,8 @@ function Signup() {
       {/* Main Content */}
       <div className="animate__animated animate__fadeIn relative flex items-center justify-center min-h-screen">
         <div className="card bg-gray-800 bg-opacity-90 p-6 rounded-lg shadow-lg">
-          <h1 className="text-3xl d-flex text-center justify-center font-bold text-white">SIGN-UP</h1>
-          <h3 className="text-white mt-2">Welcome [user]</h3>
+          <h1 className="font-sans text-3xl d-flex text-center justify-center font-bold text-white">SIGN-UP</h1>
+          <h3 className="font-serif text-white mt-2">Welcome [user]</h3>
           <div className="container mt-2">
             <Input
               p="Enter Email "

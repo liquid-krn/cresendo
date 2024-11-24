@@ -93,7 +93,7 @@ function Purchase() {
                 className="h-8 w-auto"
               />
               <h1 className="mt-3 ms-2 navbrandtext">
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 to-pink-400">
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-600 to-purple-200">
                   Cresendo
                 </span>
               </h1>
