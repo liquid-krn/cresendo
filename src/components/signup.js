@@ -139,23 +139,23 @@ function Signup() {
       {/* Main Content */}
       <div className="animate__animated animate__fadeIn relative flex items-center justify-center min-h-screen">
         <div className="card bg-gray-800 bg-opacity-90 p-6 rounded-lg shadow-lg">
-          <h1 className="font-sans text-3xl d-flex text-center justify-center font-bold text-white">SIGN-UP</h1>
-          <h3 className="font-serif text-white mt-2">Welcome [user]</h3>
+          <h1 className="font-sans text-3xl d-flex text-center justify-center font-bold text-sky-100">SIGN-UP</h1>
+          <h3 className="font-serif text-sky-100 mt-2">Welcome [user]</h3>
           <div className="container mt-2">
             <Input
               p="Enter Email "
               t="email"
-              className="focus:border-lime-500 placeholder:italic placeholder:text-slate-400 border-0 border-bottom border-primary-subtle"
+              className="text-sky-100 focus:border-lime-500 placeholder:italic placeholder:text-slate-400 border-0 border-bottom border-primary-subtle"
             />
             <Input
               p="Username"
               t="Username"
-              className="placeholder:italic placeholder:text-slate-400 mt-4 border-0 border-bottom border-primary-subtle"
+              className="text-sky-100 placeholder:italic placeholder:text-slate-400 mt-4 border-0 border-bottom border-primary-subtle"
             />
              <Input
               p="Password"
               t="password"
-              className="placeholder:italic placeholder:text-slate-400 mt-4 border-0 border-bottom border-primary-subtle"
+              className="text-sky-100 placeholder:italic placeholder:text-slate-400 mt-4 border-0 border-bottom border-primary-subtle"
             />
        
           </div>

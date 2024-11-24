@@ -137,13 +137,13 @@ function Home() {
       <main className="animate__animated animate__fadeIn relative px-6 pt-24 lg:px-8">
         <div className="mx-auto max-w-2xl py-16 sm:py-24 lg:py-32">
           <div className="text-center welcome shadow-2xl">
-            <h1 className="font-sans text-balance text text-5xl font-bold tracking-tight text-gray-900 sm:text-7xl">
+            <h1 className="font-sans text-balance text text-5xl font-bold tracking-tight text-sky-100 sm:text-7xl">
               Welcome to{' '}
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-purple-200">
                 Cresendo
               </span>
             </h1>
-            <p className="text-2xl font-serif mt-8 font-medium text-gray-500 sm:text-xl">
+            <p className="text-2xl font-serif mt-8 font-medium text-sky-100 sm:text-xl">
               Your gateway to reliable{' '}
               <span className="font-bold text-2xl bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-purple-200">
                 Bitcoin (BTC)

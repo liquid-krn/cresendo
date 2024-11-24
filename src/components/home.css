@@ -22,9 +22,6 @@
       img{
         border-radius: 10px;
       }
-      .welcome h1, .welcome p{
-        color: aliceblue;
-      }
       .navbrand{
         position: relative;
         float: left;
@@ -44,14 +41,7 @@
         font-size: 25px;
         font-weight: bold;
         color: aliceblue;
-    }
-      .b1 {
-        animation: fadeIn 4s ease-in-out;
-      }
-      .b2 {
-        animation: fadeIn 5s ease-in-out;
-      }
-      
+    }      
     .homepage >div > h1{
         font-size: 45px;
         font-weight: bold;
@@ -95,8 +85,6 @@ input{
     display: flex;
     margin: 20px auto;
     outline: none;
-    color: aliceblue;
-    background-color: transparent;
     width: 100%;
 }
 .card {
@@ -126,10 +114,6 @@ input{
 }
 }
 @media (max-width: 1380px){  
-    a{
-        text-decoration: none;
-        color: white;
-    }
     .dropdown{
         width: 100%;
        }
@@ -199,10 +183,6 @@ input{
    .payment-card{
     width: 100%;
    }
-    a{
-        text-decoration: none;
-        color: white;
-    }
     .backgroundImg {
         height: 100vh;
         width: 100%;
