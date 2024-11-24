@@ -177,7 +177,7 @@ function Purchase() {
 
       <div className="animate__animated animate__fadeIn relative flex items-center justify-center min-h-screen">
         <div className="card bg-gray-800 bg-opacity-90 p-6 rounded-lg shadow-lg">
-          <h1 className="d-flex justify-center items-center mx-auto mt-2" style={{ color: "white" }}>
+          <h1 className="d-flex mt-2 text-sky-50">
                         $/{rate.toLocaleString()} | ₦{(rate * entry).toLocaleString()}
                     </h1>
                     <div className="d-flex mx-auto mt-5 payment-card">

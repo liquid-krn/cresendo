@@ -141,7 +141,7 @@ function Signup() {
         <div className="card bg-gray-800 bg-opacity-90 p-6 rounded-lg shadow-lg">
           <h1 className="text-3xl d-flex text-center justify-center font-bold text-white">SIGN-UP</h1>
           <h3 className="text-white mt-2">Welcome [user]</h3>
-          <div className="container ">
+          <div className="container mt-2">
             <Input
               p="Enter Email "
               t="email"

@@ -116,13 +116,11 @@ input::placeholder {
     padding: 10px;
 }
 .card h1{
-    color: aliceblue;
     margin: 5px auto 3px;
     font-weight: bolder;
     font-size: 30px;
     font-family: sans-serif;
     width: 50%;
-    display: flex;
     justify-content: center;
 
 }
