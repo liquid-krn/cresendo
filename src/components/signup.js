@@ -42,7 +42,7 @@ function Signup() {
       <header className="absolute inset-x-0 top-0 z-50 bg-gray-800 bg-opacity-80 backdrop-blur-sm">
         <nav
           aria-label="Global"
-          className="flex items-center justify-between p-6 lg:px-8"
+          className="flex items-center justify-between p-3 lg:px-8"
         >
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-1.5" onClick={handleClick}>
@@ -139,23 +139,23 @@ function Signup() {
       {/* Main Content */}
       <div className="animate__animated animate__fadeIn relative flex items-center justify-center min-h-screen">
         <div className="card bg-gray-800 bg-opacity-90 p-6 rounded-lg shadow-lg">
-          <h1 className="text-3xl font-bold text-white">SIGN-UP</h1>
+          <h1 className="text-3xl d-flex text-center justify-center font-bold text-white">SIGN-UP</h1>
           <h3 className="text-white mt-2">Welcome [user]</h3>
           <div className="container ">
             <Input
               p="Enter Email "
               t="email"
-              className=" border-0 border-bottom border-primary-subtle"
+              className="focus:border-lime-500 placeholder:italic placeholder:text-slate-400 border-0 border-bottom border-primary-subtle"
             />
             <Input
               p="Username"
               t="Username"
-              className="mt-4 border-0 border-bottom border-primary-subtle"
+              className="placeholder:italic placeholder:text-slate-400 mt-4 border-0 border-bottom border-primary-subtle"
             />
              <Input
               p="Password"
               t="password"
-              className="mt-4 border-0 border-bottom border-primary-subtle"
+              className="placeholder:italic placeholder:text-slate-400 mt-4 border-0 border-bottom border-primary-subtle"
             />
        
           </div>

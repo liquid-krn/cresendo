@@ -116,7 +116,7 @@ function Purchase() {
               href="#"
               className="transition delay-150 duration-300 ease-in-out transform hover:scale-105 rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500"
             >
-              Sign-up
+              Home
             </a>
           </div>
           <div className="lg:hidden">
@@ -166,7 +166,7 @@ function Purchase() {
                     href="#"
                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold text-gray-900 hover:bg-gray-50"
                   >
-                    Sign-Up
+                    Home
                   </a>
                 </div>
               </div>
@@ -203,7 +203,7 @@ function Purchase() {
                                 <li>
                                     <button
                                         className="dropdown-item"
-                                        onClick={() => handleCurrencySelection("ETH", "ETH")}
+                                        onClick={() => handleCurrencySelection("ETH", "USDT")}
                                     >
                                         <i className="fa-brands fa-ethereum me-2"></i> Ethereum
                                     </button>

@@ -99,7 +99,7 @@ input{
     display: flex;
     margin: 20px auto;
     outline: none;
-    color: white;
+    color: aliceblue;
     background-color: transparent;
     width: 100%;
 }
@@ -122,6 +122,9 @@ input::placeholder {
     font-size: 30px;
     font-family: sans-serif;
     width: 50%;
+    display: flex;
+    justify-content: center;
+
 }
 .card > h3{
     margin-top: 30px;
@@ -173,12 +176,12 @@ input::placeholder {
         display: flex;
         margin: 20px auto;
         outline: none;
-        color: white;
+        color: aliceblue;
         background-color: transparent;
         width: 100%;
     }
     input::placeholder {
-        color: white; 
+        color: aliceblue; 
     }
     .card {
         width: 50%;
@@ -238,12 +241,12 @@ input::placeholder {
         display: flex;
         margin: 20px 0  0 10px;
         outline: none;
-        color: white;
+        color: aliceblue;
         background-color: transparent;
         width: 100%;
     }
     input::placeholder {
-        color: white; 
+        color: aliceblue; 
     }
     
     .card {

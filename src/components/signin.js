@@ -42,7 +42,7 @@ function Signin() {
       <header className="absolute inset-x-0 top-0 z-50 bg-gray-800 bg-opacity-80 backdrop-blur-sm">
         <nav
           aria-label="Global"
-          className="flex items-center justify-between p-6 lg:px-8"
+          className="flex items-center justify-between p-3 lg:px-8"
         >
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-1.5" onClick={handleClick}>
@@ -145,12 +145,12 @@ function Signin() {
             <Input
               p="Enter Email or Username"
               t="email"
-              className="mt-4 border-0 border-bottom border-primary-subtle"
+              className="placeholder:italic placeholder:text-slate-400 mt-4 border-0 border-bottom border-primary-subtle"
             />
             <Input
               p="Password"
               t="password"
-              className="mt-4 border-0 border-bottom border-primary-subtle"
+              className="placeholder:italic placeholder:text-slate-400 mt-4 border-0 border-bottom border-primary-subtle"
             />
             <a href="#" className="mt-6 text-white">
               Forgot password?
