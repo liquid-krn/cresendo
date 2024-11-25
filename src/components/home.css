@@ -37,16 +37,7 @@
         text-align: center;
         animation: fadeIn 3s ease-in-out;
       }
-      .homepage >div > h3{
-        font-size: 25px;
-        font-weight: bold;
-        color: aliceblue;
-    }      
-    .homepage >div > h1{
-        font-size: 45px;
-        font-weight: bold;
-        color: aliceblue;
-    }
+ 
     .dropdown{
         width: 100%;
        }
@@ -151,8 +142,6 @@ input{
         display: flex;
         margin: 20px auto;
         outline: none;
-        color: aliceblue;
-        background-color: transparent;
         width: 100%;
     }
     .card {

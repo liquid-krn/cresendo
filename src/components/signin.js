@@ -65,7 +65,7 @@ function Signin() {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-sm font-semibold text-white"
+                className="text-lg font-semibold text-sky-100"
               >
                 {item.name}
               </a>
@@ -115,7 +115,7 @@ function Signin() {
                     <a
                       key={item.id}
                       href={item.href}
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50"
+                      className="-mx-3 block text-lg rounded-lg px-3 py-2  font-semibold text-sky-100 hover:bg-gray-50"
                     >
                       {item.name}
                     </a>
@@ -145,12 +145,12 @@ function Signin() {
             <Input
               p="Enter Email or Username"
               t="email"
-              className="text-sky-100 placeholder:italic placeholder:text-slate-400 mt-4 border-0 border-bottom border-primary-subtle"
+              className="bg-transparent text-sky-100 placeholder:italic placeholder:text-slate-400 mt-4 border-0 border-bottom border-primary-subtle"
             />
             <Input
               p="Password"
               t="password"
-              className="text-sky-100 placeholder:italic placeholder:text-slate-400 mt-4 border-0 border-bottom border-primary-subtle"
+              className="bg-transparent text-sky-100 placeholder:italic placeholder:text-slate-400 mt-4 border-0 border-bottom border-primary-subtle"
             />
             <a href="#" className="font-sans mt-6 text-sky-100">
               Forgot password?

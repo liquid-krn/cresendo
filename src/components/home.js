@@ -72,7 +72,7 @@ function Home() {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-sm font-semibold text-white"
+                className="text-lg font-semibold text-sky-100"
               >
                 {item.name}
               </a>

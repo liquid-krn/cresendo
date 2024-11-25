@@ -65,7 +65,7 @@ function Signup() {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-sm font-semibold text-white"
+                className="text-lg font-semibold text-sky-100"
               >
                 {item.name}
               </a>
@@ -145,17 +145,17 @@ function Signup() {
             <Input
               p="Enter Email "
               t="email"
-              className="text-sky-100 focus:border-lime-500 placeholder:italic placeholder:text-slate-400 border-0 border-bottom border-primary-subtle"
+              className="bg-transparent text-sky-100 focus:border-lime-500 placeholder:italic placeholder:text-slate-400 border-0 border-bottom border-primary-subtle"
             />
             <Input
               p="Username"
               t="Username"
-              className="text-sky-100 placeholder:italic placeholder:text-slate-400 mt-4 border-0 border-bottom border-primary-subtle"
+              className="bg-transparent text-sky-100 placeholder:italic placeholder:text-slate-400 mt-4 border-0 border-bottom border-primary-subtle"
             />
              <Input
               p="Password"
               t="password"
-              className="text-sky-100 placeholder:italic placeholder:text-slate-400 mt-4 border-0 border-bottom border-primary-subtle"
+              className="bg-transparent text-sky-100 placeholder:italic placeholder:text-slate-400 mt-4 border-0 border-bottom border-primary-subtle"
             />
        
           </div>
