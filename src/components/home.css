@@ -228,14 +228,6 @@ input{
         width: 80%;
         margin: 0 auto;
       }
-      .priceinput{
-        display: flex;
-        color: white;
-        background-color: transparent;
-        width: 100%;
-        margin-top: 20px;
-        margin-left: 20px;
-      }
     .welcome{
         border-radius: 40px;
     }

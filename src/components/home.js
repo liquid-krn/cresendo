@@ -169,11 +169,7 @@ function Home() {
           </div>
         </div>
       </main>
-
-      {/* Footer */}
-      <footer className="absolute bottom-0 inset-x-0">
         <Footer />
-      </footer>
     </div>
   );
 }

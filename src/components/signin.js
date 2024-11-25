@@ -141,11 +141,11 @@ function Signin() {
         <div className="card bg-gray-800 bg-opacity-90 p-6 rounded-lg shadow-lg">
           <h1 className="font-sans text-3xl font-bold text-sky-100 text-center">SIGN-IN</h1>
           <h3 className="font-serif text-sky-100 mt-2">Welcome Back [user]</h3>
-          <div className="container mt-2">
+          <div className="container">
             <Input
               p="Enter Email or Username"
               t="email"
-              className="bg-transparent text-sky-100 placeholder:italic placeholder:text-slate-400 mt-4 border-0 border-bottom border-primary-subtle"
+              className="bg-transparent text-sky-100 placeholder:italic placeholder:text-slate-400 mt-3 border-0 border-bottom border-primary-subtle"
             />
             <Input
               p="Password"
