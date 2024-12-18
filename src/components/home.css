@@ -5,9 +5,9 @@
       }
       .welcome{
         background-color: #21252e;
-        border-radius: 90px;
+        border-radius: 10px;
         opacity: 0.9; 
-        padding: 20px;
+        padding: 15px;
         }
         .welcomepagebutton{
             width: 70%;
@@ -202,14 +202,14 @@ input{
         background-color: transparent;
         width: 100%;
     }
-    .card {
+    /* .card {
         width: 80%;
         padding: 10px;
         margin: 50px auto;
         background-color: #21252e;
         border-radius: 25px;
         opacity: 0.9; 
-    }
+    } */
     .card > h3{
         margin-top: 15px;
         width: 50%;
@@ -229,7 +229,7 @@ input{
         margin: 0 auto;
       }
     .welcome{
-        border-radius: 40px;
+        border-radius: 10px;
     }
     .navbrandtext{
         font-family: sans-serif;

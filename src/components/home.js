@@ -39,10 +39,10 @@ function Home() {
       <header className="absolute inset-x-0 top-0 z-50">
         <nav
           aria-label="Global"
-          className="flex items-center justify-between p-3 lg:px-8 bg-gray-800"
+          className="flex items-center justify-between p-2 lg:px-8 bg-gray-800"
         >
-          <div className="flex lg:flex-1">
-            <a href="#" className="-m-1.5 p-1.5 " onClick={handleClick}>
+          <div className="lg:flex-1 ml-5 sm:ml-11">
+            <a href="#" className="-m-1.5 p-1.5" onClick={handleClick}>
               <span className="sr-only">Cresendo</span>
               <img
                 style={{ width: '50px', height: '50px' }}
@@ -51,17 +51,17 @@ function Home() {
                 className="h-8 w-auto"
               />
               <h1 className="mt-3 ms-2 navbrandtext">
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-purple-200">
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-purple-200 hidden sm:block">
                   Cresendo
                 </span>
               </h1>
             </a>
           </div>
-          <div className="flex lg:hidden">
+          <div className="flex lg:hidden mr-6 sm:mr-12 border text-blue-700">
             <button
               type="button"
               onClick={() => setMobileMenuOpen(true)}
-              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-blue-700"
+              className="inline-flex items-center justify-center rounded-md p-2.5 text-blue-700"
             >
               <span className="sr-only">Open main menu</span>
               <Bars3Icon aria-hidden="true" className="size-6" />
@@ -78,11 +78,11 @@ function Home() {
               </a>
             ))}
           </div>
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+          <div className="hidden lg:flex lg:flex-1 lg:justify-end mr-12">
             <a
               onClick={Login}
               href="#"
-              className="transition transform rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 hover:scale-105"
+              className="transition transform rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white hover:bg-indigo-500 hover:scale-105"
             >
               Login
             </a>
@@ -135,8 +135,8 @@ function Home() {
 
       {/* Main Content */}
       <main className="animate__animated animate__fadeIn relative px-6 pt-24 lg:px-8">
-        <div className="mx-auto max-w-2xl py-16 sm:py-24 lg:py-32">
-          <div className="text-center welcome shadow-2xl">
+        <div className="mx-auto max-w-2xl">
+          <div className="text-center welcome ">
             <h1 className="font-sans text-balance text text-5xl font-bold tracking-tight text-sky-100 sm:text-7xl">
               Welcome to{' '}
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-purple-200">
@@ -146,11 +146,11 @@ function Home() {
             <p className="text-2xl font-serif mt-8 font-medium text-sky-100 sm:text-xl">
               Your gateway to reliable{' '}
               <span className="font-bold text-2xl bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-purple-200">
-                Bitcoin (BTC)
+                Bitcoin(BTC)
               </span>{' '}
               and{' '}
               <span className="font-bold text-2xl bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-purple-200">
-                Ethereum (ETH)
+                Ethereum(ETH)
               </span>{' '}
               trades. Join us today to experience seamless cryptocurrency transactions!
             </p>
