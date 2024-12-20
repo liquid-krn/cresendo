@@ -39,26 +39,36 @@ function Signin() {
       ></div>
 
       {/* Navbar */}
-      <header className="absolute inset-x-0 top-0 z-50 bg-gray-800 bg-opacity-80 backdrop-blur-sm">
+      <header className="absolute inset-x-0 top-0 z-50">
         <nav
           aria-label="Global"
-          className="flex items-center justify-between p-3 lg:px-8"
+          className="flex items-center justify-between p-2 lg:px-8 bg-gray-800"
         >
-          <div className="flex lg:flex-1">
+          <div className="lg:flex-1 ml-5 sm:ml-16">
             <a href="#" className="-m-1.5 p-1.5" onClick={handleClick}>
-              <span className="sr-only">Cresendo</span>
+              <span className="sr-only">Crescendo</span>
               <img
-                style={{ width: "50px", height: "50px" }}
-                alt=""
+                style={{ width: '50px', height: '50px' }}
+                alt="Crescendo Logo"
                 src="/images/icon.jpg"
                 className="h-8 w-auto"
               />
               <h1 className="mt-3 ms-2 navbrandtext">
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-purple-200">
-                  Cresendo
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-purple-200 hidden sm:block">
+                  Crescendo
                 </span>
               </h1>
             </a>
+          </div>
+          <div className="flex lg:hidden mr-6 sm:mr-14 border text-blue-700 rounded">
+            <button
+              type="button"
+              onClick={() => setMobileMenuOpen(true)}
+              className="inline-flex items-center justify-center rounded-md p-2.5 text-blue-700"
+            >
+              <span className="sr-only">Open main menu</span>
+              <Bars3Icon aria-hidden="true" className="size-6" />
+            </button>
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
             {navigation.map((item) => (
@@ -71,33 +81,23 @@ function Signin() {
               </a>
             ))}
           </div>
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+          <div className="hidden lg:flex lg:flex-1 lg:justify-end mr-12">
             <a
-              onClick={Signup}
+              onClick={Login}
               href="#"
-              className="transition delay-150 duration-300 ease-in-out transform hover:scale-105 rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500"
+              className="transition transform rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white hover:bg-indigo-500 hover:scale-105"
             >
-              Sign-up
+              Login
             </a>
           </div>
-          <div className="lg:hidden">
-            <button
-              type="button"
-              onClick={() => setMobileMenuOpen(true)}
-              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white"
-            >
-              <span className="sr-only">Open main menu</span>
-              <Bars3Icon className="h-6 w-6" aria-hidden="true" />
-            </button>
-          </div>
         </nav>
-        <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen}>
+        <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
           <div className="fixed inset-0 z-50" />
           <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5">
-                <span className="sr-only">Cresendo</span>
-                <img alt="" src="/images/icon.jpg" className="h-8 w-auto" />
+                <span className="sr-only">Crescendo</span>
+                <img alt="Crescendo Logo" src="/images/icon.jpg" className="h-8 w-auto" />
               </a>
               <button
                 type="button"
@@ -105,7 +105,7 @@ function Signin() {
                 className="-m-2.5 rounded-md p-2.5 text-gray-700"
               >
                 <span className="sr-only">Close menu</span>
-                <XMarkIcon aria-hidden="true" className="h-6 w-6" />
+                <XMarkIcon aria-hidden="true" className="size-6" />
               </button>
             </div>
             <div className="mt-6 flow-root">
@@ -113,9 +113,9 @@ function Signin() {
                 <div className="space-y-2 py-6">
                   {navigation.map((item) => (
                     <a
-                      key={item.id}
+                      key={item.name}
                       href={item.href}
-                      className="-mx-3 block text-lg rounded-lg px-3 py-2  font-semibold text-sky-100 hover:bg-gray-50"
+                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50"
                     >
                       {item.name}
                     </a>
@@ -123,11 +123,11 @@ function Signin() {
                 </div>
                 <div className="py-6">
                   <a
-                    onClick={Signup}
+                    onClick={Login}
                     href="#"
                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold text-gray-900 hover:bg-gray-50"
                   >
-                    Sign-Up
+                    Log in
                   </a>
                 </div>
               </div>

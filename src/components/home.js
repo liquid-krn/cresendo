@@ -41,23 +41,23 @@ function Home() {
           aria-label="Global"
           className="flex items-center justify-between p-2 lg:px-8 bg-gray-800"
         >
-          <div className="lg:flex-1 ml-5 sm:ml-11">
+          <div className="lg:flex-1 ml-5 sm:ml-16">
             <a href="#" className="-m-1.5 p-1.5" onClick={handleClick}>
-              <span className="sr-only">Cresendo</span>
+              <span className="sr-only">Crescendo</span>
               <img
                 style={{ width: '50px', height: '50px' }}
-                alt="Cresendo Logo"
+                alt="Crescendo Logo"
                 src="/images/icon.jpg"
                 className="h-8 w-auto"
               />
               <h1 className="mt-3 ms-2 navbrandtext">
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-purple-200 hidden sm:block">
-                  Cresendo
+                  Crescendo
                 </span>
               </h1>
             </a>
           </div>
-          <div className="flex lg:hidden mr-6 sm:mr-12 border text-blue-700">
+          <div className="flex lg:hidden mr-6 sm:mr-14 border text-blue-700 rounded">
             <button
               type="button"
               onClick={() => setMobileMenuOpen(true)}
@@ -93,8 +93,8 @@ function Home() {
           <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5">
-                <span className="sr-only">Cresendo</span>
-                <img alt="Cresendo Logo" src="/images/icon.jpg" className="h-8 w-auto" />
+                <span className="sr-only">Crescendo</span>
+                <img alt="Crescendo Logo" src="/images/icon.jpg" className="h-8 w-auto" />
               </a>
               <button
                 type="button"
@@ -140,7 +140,7 @@ function Home() {
             <h1 className="font-sans text-balance text text-5xl font-bold tracking-tight text-sky-100 sm:text-7xl">
               Welcome to{' '}
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-purple-200">
-                Cresendo
+                Crescendo
               </span>
             </h1>
             <p className="text-2xl font-serif mt-8 font-medium text-sky-100 sm:text-xl">
