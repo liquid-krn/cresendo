@@ -42,7 +42,7 @@ function Home() {
           className="flex items-center justify-between p-2 lg:px-8 bg-gray-800"
         >
           <div className="lg:flex-1 ml-5 sm:ml-16">
-            <a href="#" className="-m-1.5 p-1.5" onClick={handleClick}>
+            <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Crescendo</span>
               <img
                 style={{ width: '50px', height: '50px' }}

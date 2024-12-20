@@ -80,12 +80,9 @@ input{
 }
 .card {
     width: 24%;
-    height: 393x;
-    margin: 50px auto;
     background-color: #21252e;
     border-radius: 20px;
     opacity: 0.9; 
-    padding: 10px;
 }
 .card h1{
     margin: 5px auto 3px;
@@ -94,7 +91,6 @@ input{
     font-family: sans-serif;
     width: 50%;
     justify-content: center;
-
 }
 .card > h3{
     margin-top: 30px;
@@ -146,8 +142,6 @@ input{
     }
     .card {
         width: 50%;
-        height: 325px;
-        margin: 50px auto;
         background-color: #21252e;
         border-radius: 20px;
         opacity: 0.9; 
@@ -191,7 +185,7 @@ input{
             width: 200px;
     }
     .btn{
-        width: 100%;
+        width: 95%;
         text-align: center;
     }
     .priceinput{
@@ -203,8 +197,6 @@ input{
         width: 100%;
     }
     .card {
-        width: 80%;
-        margin: 0px auto;
         background-color: #21252e;
         border-radius: 10px;
         opacity: 0.9; 
@@ -233,6 +225,9 @@ input{
     .navbrandtext{
         font-family: sans-serif;
         font-size: larger;
+    }
+    .card{
+        width: 85%;
     }
 }
 
