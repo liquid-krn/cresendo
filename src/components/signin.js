@@ -87,7 +87,7 @@ function Signin() {
               href="#"
               className="transition transform rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white hover:bg-indigo-500 hover:scale-105"
             >
-              Login
+              Signup
             </a>
           </div>
         </nav>
@@ -123,11 +123,11 @@ function Signin() {
                 </div>
                 <div className="py-6">
                   <a
-                    onClick={Login}
+                    onClick={Signup}
                     href="#"
                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold text-gray-900 hover:bg-gray-50"
                   >
-                    Log in
+                    Sign up
                   </a>
                 </div>
               </div>

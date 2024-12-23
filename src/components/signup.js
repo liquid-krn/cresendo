@@ -25,7 +25,7 @@ function Signup() {
     navigate("/purchase");
   }
   function Signup() {
-    navigate("/signin");
+    navigate("/signup");
   }
 
   return (

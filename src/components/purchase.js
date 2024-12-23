@@ -40,7 +40,7 @@ function Purchase() {
             const data = await response.json();
 
             if (data.success) {
-                const adjustedRate = Math.max(0, data.rates[selectedCurrency.toUpperCase()] - 100);
+                const adjustedRate = Math.max(0, data.rates[selectedCurrency.toUpperCase()] );
                 setRate(adjustedRate);
             } else {
                 setError("Failed to fetch live rates.");
@@ -79,47 +79,48 @@ function Purchase() {
       ></div>
 
 <header className="absolute inset-x-0 top-0 z-50 bg-gray-800 bg-opacity-80 backdrop-blur-sm">
-        <nav
+<nav
           aria-label="Global"
-          className="flex items-center justify-between p-6 lg:px-8"
+          className="flex items-center justify-between p-2 lg:px-8 bg-gray-800"
         >
-          <div className="flex lg:flex-1">
+          <div className="lg:flex-1 ml-5 sm:ml-16">
             <a href="#" className="-m-1.5 p-1.5" onClick={handleClick}>
-              <span className="sr-only">Cresendo</span>
+              <span className="sr-only">Crescendo</span>
               <img
-                style={{ width: "50px", height: "50px" }}
-                alt=""
+                style={{ width: '50px', height: '50px' }}
+                alt="Crescendo Logo"
                 src="/images/icon.jpg"
                 className="h-8 w-auto"
               />
               <h1 className="mt-3 ms-2 navbrandtext">
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-600 to-purple-200">
-                  Cresendo
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-purple-200 hidden sm:block">
+                  Crescendo
                 </span>
               </h1>
             </a>
+          </div>
+          <div className="flex lg:hidden mr-6 sm:mr-14 border text-blue-700 rounded">
+            <button
+              type="button"
+              onClick={() => setMobileMenuOpen(true)}
+              className="inline-flex items-center justify-center rounded-md p-2.5 text-blue-700"
+            >
+              <span className="sr-only">Open main menu</span>
+              <Bars3Icon aria-hidden="true" className="size-6" />
+            </button>
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
             {navigation.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="text-sm font-semibold text-white"
+                className="text-lg font-semibold text-sky-100"
               >
                 {item.name}
               </a>
             ))}
           </div>
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a
-              onClick={handleClick}
-              href="#"
-              className="transition delay-150 duration-300 ease-in-out transform hover:scale-105 rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500"
-            >
-              Home
-            </a>
-          </div>
-          <div className="lg:hidden">
+          <div className="hidden lg:flex lg:flex-1 lg:justify-end mr-12">
             <button
               type="button"
               onClick={() => setMobileMenuOpen(true)}
@@ -212,7 +213,7 @@ function Purchase() {
                         </div>
                         <Input
                             t="number"
-                            className="bg-transparent text-sky-100 placeholder:italic placeholder:text-slate-400 mt-4 border-0 border-bottom border-primary-subtle"
+                            className="ml-3 font-serif text-2xl bg-transparent text-sky-100 placeholder:italic placeholder:text-slate-400 mt-2 border-0 border-bottom border-primary-subtle text-center xl:text-lg xl:ml-0"
                             p="Enter $ amount"
                             n="amount"
                             oC={handleAmountChange}
@@ -220,7 +221,7 @@ function Purchase() {
                         />
                     </div>
                     <Button text="Accept" className="transition transform hover:scale-105 btn btn-primary mt-2" onClick={accept} />
-                    <Button text="Back" className="transition transform hover:scale-105 btn btn-primary mt-2" />
+                    <Button text="Back" className="transition transform hover:scale-105 btn btn-primary mt-2" onClick={handleClick} />
                     {error && (
                         <p className="text-danger mt-3 mx-auto">
                             {error}
