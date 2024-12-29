@@ -14,18 +14,34 @@ const navigation = [
   { id: 4, name: "Contact us", href: "#" },
 ];
 
+var isloggedin = true
+
 function Signin() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
+  const [userDetails, setUserDetails] = useState({ username: "", password: "" });
+  const [user, setStatus] = useState("");
   const navigate = useNavigate();
   function handleClick() {
     navigate("/");
   }
   function Login() {
-    navigate("/purchase");
+    navigate(isloggedin?"/purchase": null);
   }
   function Signup() {
     navigate("/signup");
+  }
+  function onsiginin(e){
+    e.preventDefault();
+    const { name, value } = e.target;
+    const {username, password}= userDetails;
+    setStatus(""); 
+    setUserDetails((oldValue) => ({
+      ...oldValue,
+      [name]: value,  
+    }));
+    if(username=="" || password==""){
+      setStatus("kindly fill the form below")
+    }
   }
 
   return (
@@ -137,19 +153,25 @@ function Signin() {
       </header>
 
       {/* Main Content */}
-      <div className="animate__animated animate__fadeIn relative flex items-center justify-center min-h-screen">
+      <form onSubmit={onsiginin} className="animate__animated animate__fadeIn relative flex items-center justify-center min-h-screen">
         <div className="card bg-gray-800 bg-opacity-90 p-6 rounded-lg shadow-lg h-2/4">
           <h1 className="font-sans text-3xl font-bold text-sky-100 text-center">SIGN-IN</h1>
-          <h3 className="font-serif text-sky-100 mt-2">Welcome Back [user]</h3>
+          <h3 className="font-serif text-sky-100 mt-2">Welcome {user}</h3>
           <div className="container">
             <Input
               p="Enter Email or Username"
               t="email"
+              n="username"
+              oc={onsiginin}
+              value={userDetails.username}
               className="bg-transparent text-sky-100 placeholder:italic placeholder:text-slate-400 mt-3 border-0 border-bottom border-primary-subtle"
             />
             <Input
               p="Password"
               t="password"
+              n="password"
+              oC={onsiginin}
+              value={userDetails.password}
               className="bg-transparent text-sky-100 placeholder:italic placeholder:text-slate-400 mt-4 border-0 border-bottom border-primary-subtle"
             />
             <a href="#" className="font-sans mt-6 text-sky-100">
@@ -162,8 +184,8 @@ function Signin() {
             text="Signin"
           />
         </div>
-      </div>
-
+      </form>
+                
       {/* Footer */}
       <Footer />
     </div>

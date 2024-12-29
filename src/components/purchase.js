@@ -213,7 +213,7 @@ function Purchase() {
                         </div>
                         <Input
                             t="number"
-                            className="ml-3 font-serif text-2xl bg-transparent text-sky-100 placeholder:italic placeholder:text-slate-400 mt-2 border-0 border-bottom border-primary-subtle text-center xl:text-lg xl:ml-0"
+                            className="ml-3 font-serif text-xl bg-transparent text-sky-100 placeholder:italic placeholder:text-slate-400 mt-2 border-0 border-bottom border-primary-subtle text-center xl:text-lg xl:ml-0"
                             p="Enter $ amount"
                             n="amount"
                             oC={handleAmountChange}

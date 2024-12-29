@@ -137,10 +137,11 @@ function Signup() {
       </header>
 
       {/* Main Content */}
-      <div className="animate__animated animate__fadeIn relative flex items-center justify-center min-h-screen">
+      <form className="animate__animated animate__fadeIn relative flex items-center justify-center min-h-screen">
         <div className="card bg-gray-800 bg-opacity-90 p-6 rounded-lg shadow-lg h-2/4">
           <h1 className="font-sans text-3xl font-bold text-sky-100 text-center">SIGN-UP</h1>
           <h3 className="font-serif text-sky-100 mt-2">Welcome [user]</h3>
+          
           <div className="container mt-2">
             <Input
               p="Enter Email "
@@ -165,7 +166,7 @@ function Signup() {
             text="Signup"
           />
         </div>
-      </div>
+      </form>
 
       {/* Footer */}
       <Footer />
