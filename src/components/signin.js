@@ -14,39 +14,42 @@ const navigation = [
   { id: 4, name: "Contact us", href: "#" },
 ];
 
-var isloggedin = true
-
 function Signin() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [userDetails, setUserDetails] = useState({ username: "", password: "" });
   const [user, setStatus] = useState("");
   const navigate = useNavigate();
+
   function handleClick() {
     navigate("/");
   }
-  function Login() {
-    navigate(isloggedin?"/purchase": null);
+  function Login(e) {
+    e.preventDefault();
   }
   function Signup() {
     navigate("/signup");
   }
-  function onsiginin(e){
+  function handleChange(e){
     e.preventDefault();
     const { name, value } = e.target;
-    const {username, password}= userDetails;
-    setStatus(""); 
     setUserDetails((oldValue) => ({
       ...oldValue,
       [name]: value,  
     }));
-    if(username=="" || password==""){
-      setStatus("kindly fill the form below")
+  }
+  function onsiginin(e){
+    e.preventDefault();
+    const {username, password}= userDetails;
+      setStatus("")
+    if(!username || !password){
+      setStatus("kindly fill the form below");
+      return;
+    }else{
+      navigate("/purchase");
     }
   }
-
   return (
     <div className="relative min-h-screen">
-      {/* Blurred Background */}
       <div
         className="absolute inset-0 -z-10 bg-cover bg-center blur-sm"
         style={{
@@ -87,13 +90,13 @@ function Signin() {
             </button>
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
-            {navigation.map((item) => (
+            {navigation.map((props) => (
               <a
-                key={item.name}
-                href={item.href}
+                key={props.name}
+                href={props.href}
                 className="text-lg font-semibold text-sky-100"
               >
-                {item.name}
+                {props.name}
               </a>
             ))}
           </div>
@@ -156,13 +159,13 @@ function Signin() {
       <form onSubmit={onsiginin} className="animate__animated animate__fadeIn relative flex items-center justify-center min-h-screen">
         <div className="card bg-gray-800 bg-opacity-90 p-6 rounded-lg shadow-lg h-2/4">
           <h1 className="font-sans text-3xl font-bold text-sky-100 text-center">SIGN-IN</h1>
-          <h3 className="font-serif text-sky-100 mt-2">Welcome {user}</h3>
+          <h3 className="font-serif text-sky-100 mt-2">{user}</h3>
           <div className="container">
             <Input
               p="Enter Email or Username"
               t="email"
               n="username"
-              oc={onsiginin}
+              oC={handleChange}
               value={userDetails.username}
               className="bg-transparent text-sky-100 placeholder:italic placeholder:text-slate-400 mt-3 border-0 border-bottom border-primary-subtle"
             />
@@ -170,7 +173,7 @@ function Signin() {
               p="Password"
               t="password"
               n="password"
-              oC={onsiginin}
+              oC={handleChange}
               value={userDetails.password}
               className="bg-transparent text-sky-100 placeholder:italic placeholder:text-slate-400 mt-4 border-0 border-bottom border-primary-subtle"
             />
@@ -179,14 +182,12 @@ function Signin() {
             </a>
           </div>
           <Button
-            onClick={Login}
             className="transition delay-150 duration-300 ease-in-out transform hover:scale-105 btn btn-primary mt-3"
             text="Signin"
+            type="submit"
           />
         </div>
       </form>
-                
-      {/* Footer */}
       <Footer />
     </div>
   );

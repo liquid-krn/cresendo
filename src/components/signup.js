@@ -16,21 +16,40 @@ const navigation = [
 
 function Signup() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [userDetails, setUserDetails] = useState({email:"", username: "", password: "" });
+  const [user, setStatus] = useState("");
 
   const navigate = useNavigate();
   function handleClick() {
     navigate("/");
   }
   function Login() {
-    navigate("/purchase");
+    navigate("/signin");
   }
-  function Signup() {
-    navigate("/signup");
+  function handleChange(e){
+    e.preventDefault();
+    
+    const { name, value } = e.target;
+    setUserDetails((oldValue) => ({
+      ...oldValue,
+      [name]: value,  
+    }));
+  }
+  function Signup(e) {
+    e.preventDefault();
+    setStatus("")
+    const {email, username, password}= userDetails;
+    if(!email || !username || !password){
+      setStatus("kindly fill the form below");
+      return;
+    }else{
+      navigate("/purchase");
+    }
   }
 
   return (
     <div className="relative min-h-screen">
-      {/* Blurred Background */}
+
       <div
         className="absolute inset-0 -z-10 bg-cover bg-center blur-sm"
         style={{
@@ -38,7 +57,6 @@ function Signup() {
         }}
       ></div>
 
-      {/* Navbar */}
       <header className="absolute inset-x-0 top-0 z-50">
         <nav
           aria-label="Global"
@@ -135,33 +153,40 @@ function Signup() {
           </DialogPanel>
         </Dialog>
       </header>
-
-      {/* Main Content */}
-      <form className="animate__animated animate__fadeIn relative flex items-center justify-center min-h-screen">
+      <form onSubmit={Signup} className="animate__animated animate__fadeIn relative flex items-center justify-center min-h-screen">
         <div className="card bg-gray-800 bg-opacity-90 p-6 rounded-lg shadow-lg h-2/4">
           <h1 className="font-sans text-3xl font-bold text-sky-100 text-center">SIGN-UP</h1>
-          <h3 className="font-serif text-sky-100 mt-2">Welcome [user]</h3>
+          <h3 className="font-serif text-sky-100 mt-2">{user}</h3>
           
           <div className="container mt-2">
             <Input
               p="Enter Email "
               t="email"
+              n="email"
+              oC={handleChange}
+              value={userDetails.email}
               className="bg-transparent text-sky-100 focus:border-lime-500 placeholder:italic placeholder:text-slate-400 border-0 border-bottom border-primary-subtle"
             />
             <Input
               p="Username"
               t="Username"
+              n="username"
+              oC={handleChange}
+              value={userDetails.username}
               className="bg-transparent text-sky-100 placeholder:italic placeholder:text-slate-400 mt-4 border-0 border-bottom border-primary-subtle"
             />
              <Input
               p="Password"
               t="password"
+              n="password"
+              oC={handleChange}
+              value={userDetails.password}
               className="bg-transparent text-sky-100 placeholder:italic placeholder:text-slate-400 mt-4 border-0 border-bottom border-primary-subtle"
             />
        
           </div>
           <Button
-            onClick={Login}
+            type="submit"
             className="transition delay-150 duration-300 ease-in-out transform hover:scale-105 btn btn-primary mt-2"
             text="Signup"
           />
