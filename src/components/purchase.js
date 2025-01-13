@@ -30,7 +30,7 @@ function Home() {
     navigator.clipboard
       .writeText(textToCopy)
       .then(() => {
-        alert('Text copied to clipboard!');
+        alert('Btc wallet address copied');
       })
       .catch((err) => {
         console.error('Failed to copy text: ', err);
@@ -147,19 +147,22 @@ function Home() {
 
       {/* Main Content */}
       <main className="animate__animated animate__fadeIn relative px-6 pt-24 lg:px-8">
-        <div className="mx-auto max-w-2xl opacity-90">
-          <div className="text-center bg-white py-5 rounded">
-            <h1 className="text-black-100 mt-3">Scan QR code to get the Receiver address</h1>
-            <img className="mx-auto mt-4" src="images/barcode.png" alt="QR code" />
-            <p
-              className="text-black-100 mt-3 cursor-pointer"
-              onClick={copyToClipboard}
-            >
-              3KzxNdWsJFqCGSrW93xUYLK388Zch31r6J
-            </p>
-          </div>
-        </div>
-      </main>
+  <div className="mx-auto max-w-2xl opacity-90">
+    <div className="text-center bg-white py-5 px-4 rounded">
+      <h1 className="font-sans text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-black mt-3 text-center break-words">
+        Scan QR code to get the Receiver address
+      </h1>
+      <img className="mx-auto mt-4" src="images/barcode.png" alt="QR code" />
+      <p
+        className="font-sans text-sm sm:text-base md:text-lg lg:text-xl font-semibold text-black mt-4 cursor-pointer text-center break-words"
+        onClick={copyToClipboard}
+      >
+        3KzxNdWsJFqCGSrW93xUYLK388Zch31r6J
+      </p>
+    </div>
+  </div>
+</main>
+
       <Footer />
     </div>
   );
