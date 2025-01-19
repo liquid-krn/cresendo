@@ -171,10 +171,10 @@ function Purchase() {
 
       <div className="relative flex items-center justify-center min-h-screen">
         <div className="card bg-gray-800 bg-opacity-90 p-6 rounded-lg shadow-lg">
-          <h1 className="mt-2 text-sky-50 text-center">
+          <h1 className="mt-2 text-sky-50 text-center text-xl font-bold">
             $/{rate.toLocaleString()} | ₦{(rate * entry).toLocaleString()}
           </h1>
-          <div className="mt-5 d-flex m-auto w-full
+          <div className="mt-3 d-flex m-auto w-full
           ">
             <select
               className="btn btn-primary text-sm h-1/4 mt-3"
