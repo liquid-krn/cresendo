@@ -157,12 +157,12 @@ function Home() {
             <div className="mt-10 d-flex items-center justify-center gap-x-6 welcomepagebutton">
               <Button
                 onClick={handleClick}
-                className="transition transform hover:scale-105 btn btn-primary"
+                className="w-2/4 transition transform hover:scale-105 btn btn-primary"
                 text="Register"
               />
               <Button
                 onClick={Login}
-                className="transition transform hover:scale-105 btn btn-primary"
+                className="w-2/4 transition transform hover:scale-105 btn btn-primary"
                 text="Login"
               />
             </div>

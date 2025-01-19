@@ -64,14 +64,6 @@
         width: 400px;
         margin: 0 auto;
 }
-.btn{
-    margin: 0px auto;
-    width: 80%;
-    font-size: large;
-    font-weight: 600;
-    height: 3em;
-    text-align: center;
-}
 input{
     display: flex;
     margin: 20px auto;
@@ -126,14 +118,6 @@ input{
             padding-top: 20px; 
             width: 400px;
     }
-    .btn{
-        margin: 0px auto;
-        width: 80%;
-        font-size: medium;
-        font-weight: 600;
-        height: 3em;
-        text-align: center;
-    }
     input{
         display: flex;
         margin: 20px auto;
@@ -183,10 +167,6 @@ input{
             gap: 10px;
             padding-top: 20px; 
             width: 200px;
-    }
-    .btn{
-        width: 95%;
-        text-align: center;
     }
     .priceinput{
         display: flex;
