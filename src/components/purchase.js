@@ -182,8 +182,8 @@ function Purchase() {
               onChange={(e) => handleCurrencySelection(e.target.value, e.target.value)}
             >
               <option disabled>Select Coin</option>
-              <option value="BTC">Bitcoin</option>
-              <option value="ETH">Ethereum</option>
+              <option value="USDT">Bitcoin</option>
+              <option value="USDT">Ethereum</option>
             </select>
 
             <Input
@@ -197,7 +197,7 @@ function Purchase() {
           </div>
           <Button text="Accept" className="btn btn-primary mt-2" onClick={accept} />
           <Button text="Back" className="btn btn-primary mt-2" onClick={accept} />
-          {error && <p className="text-danger mt-3">{error}</p>}
+          {error && <p className="text-danger mt-3 mx-auto">{error}</p>}
         </div>
         <Footer />
       </div>

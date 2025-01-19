@@ -6,7 +6,7 @@ import { Dialog, DialogPanel } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
 const navigation = [
-  { name: 'Product', href: '#' },
+  { name: 'Products', href: '#' },
   { name: 'Features', href: '#' },
   { name: 'Rates', href: '#' },
   { name: 'Contact us', href: '#' },
@@ -18,13 +18,8 @@ function Barcode() {
   const navigate = useNavigate();
 
   function handleClick() {
-    navigate('/signup');
+    navigate('/');
   }
-
-  function Login() {
-    navigate('/signin');
-  }
-
   function copyToClipboard() {
     const textToCopy = '3KzxNdWsJFqCGSrW93xUYLK388Zch31r6J';
     navigator.clipboard
@@ -53,7 +48,7 @@ function Barcode() {
           aria-label="Global"
           className="flex items-center justify-between p-2 lg:px-8 bg-gray-800"
         >
-          <div className="lg:flex-1 ml-5 sm:ml-16">
+          <div className="lg:flex-1 ml-5 sm:ml-16" onClick={handleClick}>
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Crescendo</span>
               <img
@@ -92,7 +87,6 @@ function Barcode() {
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end mr-12">
             <a
-              onClick={Login}
               href="#"
               className="transition transform rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white hover:bg-indigo-500 hover:scale-105"
             >
@@ -130,15 +124,6 @@ function Barcode() {
                     </a>
                   ))}
                 </div>
-                <div className="py-6">
-                  <a
-                    onClick={Login}
-                    href="#"
-                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold text-gray-900 hover:bg-gray-50"
-                  >
-                    Log in
-                  </a>
-                </div>
               </div>
             </div>
           </DialogPanel>
@@ -149,10 +134,10 @@ function Barcode() {
       <main className="animate__animated animate__fadeIn relative px-6 pt-24 lg:px-8">
   <div className="mx-auto max-w-2xl opacity-90">
     <div className="text-center bg-white py-5 px-4 rounded">
-      <h1 className="font-sans text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-black mt-3 text-center break-words">
-        Scan QR code to get the Receiver address
+      <h1 className="font-sans break-words text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-black mt-3 text-center break-words">
+        Scan QR code to get the Receiver address or Tap Address blow to copy
       </h1>
-      <img className="mx-auto mt-4" src="images/barcode.png" alt="QR code" />
+      <img className="mx-auto mt-4 bg-white" src="images/barcode.png" alt="QR code" />
       <p
         className="font-sans text-sm sm:text-base md:text-lg lg:text-xl font-semibold text-black mt-4 cursor-pointer text-center break-words"
         onClick={copyToClipboard}
