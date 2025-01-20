@@ -8,7 +8,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useNavigate } from "react-router-dom";
 
 const navigation = [
-  { id: 1, name: "Product", href: "#" },
+  { id: 1, name: "Products", href: "#" },
   { id: 2, name: "Features", href: "#" },
   { id: 3, name: "Rates", href: "#" },
   { id: 4, name: "Contact us", href: "#" },

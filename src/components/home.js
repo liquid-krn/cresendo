@@ -6,7 +6,7 @@ import { Dialog, DialogPanel } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
 const navigation = [
-  { name: 'Product', href: '#' },
+  { name: 'Products', href: '#' },
   { name: 'Features', href: '#' },
   { name: 'Rates', href: '#' },
   { name: 'Contact us', href: '#' },
