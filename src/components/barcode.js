@@ -27,7 +27,7 @@ function Barcode() {
     navigator.clipboard
       .writeText(textToCopy)
       .then(() => {
-        setIsModalOpen(true); // Open modal on successful copy
+        setIsModalOpen(true);
       })
       .catch((err) => {
         console.error('Failed to copy text: ', err);
@@ -36,15 +36,12 @@ function Barcode() {
 
   return (
     <div className="relative min-h-screen overflow-hidden">
-      {/* Blurred Background */}
       <div
         className="absolute inset-0 -z-10 bg-cover bg-center blur-sm"
         style={{
           backgroundImage: `url("/images/2.jpg")`,
         }}
       ></div>
-
-      {/* Navbar */}
       <header className="absolute inset-x-0 top-0 z-50">
         <nav
           aria-label="Global"
@@ -171,7 +168,7 @@ function Barcode() {
       {/* Modal */}
       {isModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <div className="bg-white p-6 rounded shadow-md w-4/5">
+          <div className="bg-white p-6 rounded shadow-md w-4/5 2xl:w-2/5">
             <p className="text-black ">
               BTC wallet address copied. Kindly send the transaction image through WhatsApp, as well as banking information
             </p>

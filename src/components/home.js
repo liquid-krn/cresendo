@@ -20,7 +20,6 @@ function Home() {
   function handleClick() {
     navigate('/signup');
   }
-
   function Login() {
     navigate('/signin');
   }
