@@ -134,14 +134,14 @@ function Barcode() {
         <div className="mx-auto max-w-2xl opacity-90">
           <div className="text-center bg-white py-5 px-4 rounded">
             <h1 className="font-sans break-words text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-black mt-3 text-center break-words">
-              Scan QR code to get the BTC Receiver address or Tap Address below to copy
+              Scan QR code to get the ETH Receiver address or Tap Address below to copy
             </h1>
             <img className="mx-auto mt-4 bg-white" src="images/barcode.png" alt="QR code" />
             <p
               className="font-sans text-sm sm:text-base md:text-lg lg:text-xl font-semibold text-black mt-4 cursor-pointer text-center break-words"
               onClick={copyToClipboard}
             >
-              3KzxNdWsJFqCGSrW93xUYLK388Zch31r6J
+              0x49679be23373f807ced15aed6d0e03348593d93f
             </p>
           </div>
           <div className="flex w-full justify-end">
@@ -170,7 +170,7 @@ function Barcode() {
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
           <div className="bg-white p-6 rounded shadow-md w-4/5 2xl:w-2/5">
             <p className="text-black ">
-              BTC wallet address copied. Kindly send the transaction image through WhatsApp, as well as banking information
+              ETH wallet address copied. Kindly send the transaction image through WhatsApp, as well as banking information
             </p>
             <button
               className="mt-4 px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-500"

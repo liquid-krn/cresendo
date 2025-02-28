@@ -4,13 +4,9 @@ import Button from './button';
 import { useNavigate } from 'react-router-dom';
 import { Dialog, DialogPanel } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import Navigation from './navigation';
 
-const navigation = [
-  { name: 'Products', href: '#' },
-  { name: 'Features', href: '#' },
-  { name: 'Rates', href: '#' },
-  { name: 'Contact us', href: '#' },
-];
+
 
 function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -26,7 +22,6 @@ function Home() {
 
   return (
     <div className="relative min-h-screen overflow-hidden">
-      {/* Blurred Background */}
       <div
         className="absolute inset-0 -z-10 bg-cover bg-center blur-sm"
         style={{
@@ -67,7 +62,7 @@ function Home() {
             </button>
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
-            {navigation.map((item) => (
+            {Navigation.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
@@ -107,7 +102,7 @@ function Home() {
             <div className="mt-6 flow-root">
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="space-y-2 py-6">
-                  {navigation.map((item) => (
+                  {Navigation.map((item) => (
                     <a
                       key={item.name}
                       href={item.href}

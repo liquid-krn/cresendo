@@ -135,7 +135,7 @@ function Barcode1() {
   <div className="mx-auto max-w-2xl opacity-90">
     <div className="text-center bg-white py-5 px-4 rounded">
       <h1 className="font-sans break-words text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-black mt-3 text-center break-words">
-        Scan QR code to get the ETH Receiver address or Tap Address below to copy
+        Scan QR code to get the BTC Receiver address or Tap Address below to copy
       </h1>
       <img className="mx-auto mt-4 bg-white" src="images/barcode.png" alt="QR code" />
       <p

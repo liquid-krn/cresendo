@@ -4,7 +4,7 @@ import Home from './home';
 import Signup from "./signup";
 import Signin from "./signin";
 import Purchase from "./purchase";
-import Barcode from "./barcode";
+import Barcode from "./barcodeeth";
 import Barcode1 from "./barcode1";
 
 
@@ -16,7 +16,7 @@ return  (
     <Route path='/signup' element={<Signup />}/>
     <Route path='/signin' element={<Signin />}/>
     <Route path='/purchase' element={<Purchase />}/>
-    <Route path='/barcode' element={<Barcode />}/>
+    <Route path='/barcodeeth' element={<Barcode />}/>
     <Route path='/barcode1' element={<Barcode1 />}/>
     </Routes>
   </Router>

@@ -6,17 +6,11 @@ import Button from "./button";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useNavigate } from "react-router-dom";
-
-const navigation = [
-  { id: 1, name: "Products", href: "#" },
-  { id: 2, name: "Features", href: "#" },
-  { id: 3, name: "Rates", href: "#" },
-  { id: 4, name: "Contact us", href: "#" },
-];
+import Navigation from "./navigation";
 
 function Signup() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [userDetails, setUserDetails] = useState({email:"", username: "", password: "" });
+  const [userDetails, setUserDetails] = useState({email:"", password: "",confirm_password: "" });
   const [user, setStatus] = useState("");
 
   const navigate = useNavigate();
@@ -38,9 +32,13 @@ function Signup() {
   function Signup(e) {
     e.preventDefault();
     setStatus("")
-    const {email, username, password}= userDetails;
-    if(!email || !username || !password){
-      setStatus("kindly fill the form below");
+    const {email, password, confirm_password}= userDetails;
+    if(!email || !password || !confirm_password){
+      setStatus("Kindly fill the form below");
+      if(password !== confirm_password){
+        setStatus("Password mismatch re-enter password")
+        return;
+      }
       return;
     }else{
       navigate("/purchase");
@@ -89,7 +87,7 @@ function Signup() {
             </button>
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
-            {navigation.map((item) => (
+            {Navigation.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
@@ -129,9 +127,9 @@ function Signup() {
             <div className="mt-6 flow-root">
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="space-y-2 py-6">
-                  {navigation.map((item) => (
+                  {Navigation.map((item) => (
                     <a
-                      key={item.name}
+                      key={item.id}
                       href={item.href}
                       className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50"
                     >
@@ -168,19 +166,19 @@ function Signup() {
               className="bg-transparent text-sky-100 focus:border-lime-500 placeholder:italic placeholder:text-slate-400 border-0 border-bottom border-primary-subtle"
             />
             <Input
-              p="Username"
-              t="Username"
-              n="username"
-              oC={handleChange}
-              value={userDetails.username}
-              className="bg-transparent text-sky-100 placeholder:italic placeholder:text-slate-400 mt-4 border-0 border-bottom border-primary-subtle"
-            />
-             <Input
               p="Password"
               t="password"
               n="password"
               oC={handleChange}
               value={userDetails.password}
+              className="bg-transparent text-sky-100 placeholder:italic placeholder:text-slate-400 mt-4 border-0 border-bottom border-primary-subtle"
+            />
+             <Input
+              p="Confirm password"
+              t="password"
+              n="confirm _password"
+              oC={handleChange}
+              value={userDetails.confirm_password}
               className="bg-transparent text-sky-100 placeholder:italic placeholder:text-slate-400 mt-4 border-0 border-bottom border-primary-subtle"
             />
        
@@ -192,8 +190,6 @@ function Signup() {
           />
         </div>
       </form>
-
-      {/* Footer */}
       <Footer />
     </div>
   );

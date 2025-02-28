@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Input from "./input";
 import Button from "./button";
+import Barcode from "./barcodeeth";
 import Footer from "./footer";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
@@ -16,21 +17,22 @@ const navigation = [
 function Purchase() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [rate, setRate] = useState(0);
-  const [entry, setEntry] = useState(0);
+  const [entry, setEntry] = useState("");
   const [currency, setCurrency] = useState("Select Coin");
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const navigate = useNavigate();
 
   const accept = () => {
-    if (entry <= 49 || entry === "") {
+    if (!entry || entry < 50) {
       setError("Entry must be $50 or more");
       return;
     }
-    if (currency === "USDT") {
-      navigate("/barcode");
-    } else if (currency === "USDC") {
+    if (currency === "BTC") {
       navigate("/barcode1");
+    } else if (currency === "ETH") {
+      navigate("/barcodeeth");
     } else {
       setError("Please select a cryptocurrency.");
     }
@@ -41,32 +43,38 @@ function Purchase() {
   };
 
   const fetchRate = async (selectedCurrency) => {
+    setLoading(true);
     const API_KEY = process.env.REACT_APP_KEY;
-    const API_URL = `https://api.coinlayer.com/live?access_key=${API_KEY}&symbols=${selectedCurrency}&target=NGN`;
+    const API_URL = `https://api.coinlayer.com/live?access_key=${API_KEY}&symbols=${selectedCurrency.toUpperCase()}&target=NGN`;
 
     try {
       const response = await fetch(API_URL);
       const data = await response.json();
+      console.log("API Response:", data);
 
-      if (data.success) {
-        const adjustedRate = Math.max(0, data.rates[selectedCurrency.toUpperCase()]);
-        setRate(adjustedRate);
+      if (data.success && data.rates[selectedCurrency.toUpperCase()]) {
+        setRate(data.rates[selectedCurrency.toUpperCase()]);
+        setError("");
       } else {
         setError("Failed to fetch live rates.");
+        setRate(0);
       }
     } catch (err) {
       setError("An error occurred while fetching rates.");
+      setRate(0);
+    } finally {
+      setLoading(false);
     }
   };
 
   const handleAmountChange = (e) => {
-    const inputValue = Number(e.target.value);
-    if (inputValue <= 49) {
+    const inputValue = e.target.value;
+    setEntry(inputValue);
+
+    if (Number(inputValue) < 50) {
       setError("Entry must be $50 or more");
-      setEntry(0);
     } else {
       setError("");
-      setEntry(inputValue);
     }
   };
 
@@ -119,8 +127,13 @@ function Purchase() {
       <div className="relative flex items-center justify-center min-h-screen">
         <div className="card bg-gray-800 bg-opacity-90 p-6 rounded-lg shadow-lg">
           <h1 className="mt-2 text-sky-50 text-center text-xl font-bold">
-            $/{rate.toLocaleString()} | ₦{(rate * entry).toLocaleString()}
+            {loading
+              ? "Fetching rate..."
+              : rate > 0 && entry
+              ? `$/${rate.toLocaleString()} | ₦${(rate * entry).toLocaleString()}`
+              : "Enter amount and select currency"}
           </h1>
+
           <div className="mt-3 d-flex m-auto w-full">
             <select
               className="btn btn-primary text-sm h-1/4 mt-3"
@@ -130,8 +143,8 @@ function Purchase() {
               <option disabled value="Select Coin">
                 Select Coin
               </option>
-              <option value="USDT">Bitcoin</option>
-              <option value="USDT">Ethereum</option>
+              <option value="BTC">Bitcoin</option>
+              <option value="ETH">Ethereum</option>
             </select>
             <Input
               t="number"
@@ -151,4 +164,5 @@ function Purchase() {
     </div>
   );
 }
+
 export default Purchase;
